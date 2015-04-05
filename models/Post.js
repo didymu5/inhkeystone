@@ -23,6 +23,7 @@ Post.add({
 		extended: { type: Types.Markdown, toolbarOptions: {  }, height: 400 }
 	},
 	InfoArticle: { type: Types.Markdown, toolbarOptions: {  }, height: 150 },
+	kindOf: {type: Types.Select, options:'authored, interview', default: 'authored'},
 	categories: { type: Types.Relationship, ref: 'PostCategory', many: true },
 	issue:{type: Types.Relationship, ref:'Issue', many: false}
 });

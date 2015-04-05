@@ -315,3 +315,14 @@ legend span {
 .remove-bottom { margin-bottom: 0 !important; }
 .half-bottom { margin-bottom: 10px !important; }
 .add-bottom { margin-bottom: 20px !important; }
+/* Float either direction */
+.u-pull-right {
+  float: right; }
+.u-pull-left {
+  float: left; }
+
+/* Clear a float */
+.u-cf {
+  content: "";
+  display: table;
+  clear: both; }
