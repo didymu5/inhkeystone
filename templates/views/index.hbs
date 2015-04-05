@@ -1,0 +1,28 @@
+{{!< default}}
+<div id="issue-banner" class="full-width" style="background-image: url({{data.issue.coverImage.secure_url}});">
+	<div class="row"><h2>{{data.issue.name}}</h2></div>
+</div>
+<div class="container">
+	<!-- http://inheritancemag.com/assets/inheritance-solo.png -->
+	<div class="row">
+		
+		<div class="lead-cover-text">
+			Issue {{data.issue.issueNumber}}<br>
+			<div class="lead">{{{data.issue.content.brief.html}}}</div>
+		</div>
+		
+		{{#each data.posts}} 
+		<div class="article-card">
+			
+			{{#if this.image.public_id }}<img src="{{this.image.secure_url}}" class="article-img">{{/if}}
+			<h3><a href="/issues/{{this.issue.issueNumber}}/{{this.slug}}">{{this.title}}</a></h3>
+			<div class="article-brief">
+				{{{this.content.brief.html}}}
+				by {{#each this.author}}{{this.name.first}} {{this.name.last}}{{/each}}
+			</div>
+
+		</div>
+		{{/each}}
+		
+	</div> <!--row-->
+</div>

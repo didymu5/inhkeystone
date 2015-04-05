@@ -1,0 +1,52 @@
+// Bootstrap
+// =========
+
+// Bootstrap can be removed entirely by deleting this line.
+
+@import "bootstrap/bootstrap";
+
+// The easiest way to customise Bootstrap variables while
+// being able to easily override the source files with new
+// versions is to override the ones you want in another file.
+//
+// You can also add your own custom variables to this file for
+// use in your site stylesheets.
+
+@import "site/variables";
+
+
+
+// @media (min-width: $screen-sm-min) 
+
+// Site Styles
+// ===========
+
+// Add your own site style includes here
+@import "site/layout";
+@import "site/bootswatch"; 
+
+#header.global{
+	.navbar-header{}
+	.navbar-brand{
+		height: auto;
+	}
+	.navbar{
+
+	}
+	.navbar-left{
+
+	}
+
+
+}
+.navbar-default{
+
+}
+
+.navbar-header {
+	@extend .col-sm-4;
+	.inh-logo {
+		@extend .img-responsive;
+		// @extend .col-md-4;
+	}
+}

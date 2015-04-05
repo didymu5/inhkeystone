@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Inheritance Magazine</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		{{!-- <link href="/styles/site.css" rel="stylesheet"> --}}
+		<link href="/styles/site.css" rel="stylesheet">
+		
+		{{!-- This file provides the default styling for the KeystoneJS Content Editor
+		- only renders when user is logged in and admin--}}
+		{{{isAdminEditorCSS user}}}
+		
+		{{!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+		//- Safely remove this block if you are not targeting IE8 --}}
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" />
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" />
+		<![endif]-->
+		
+	</head>
+	<body>
+		<header id="header" class="global">
+			<div class="container">
+				<a href="/" class="navbar-brand u-cf"><img src="http://res.cloudinary.com/inhmag/image/upload/v1427600150/inheritance-solo_vhknr6.png" alt="Inheritance Magazine" class="inh-logo img-responsive"></a>
+				<nav class="navbar">
+					<div class="container">
+						<ul class="navbar-list">
+							
+							{{# each navLinks}}
+							<li class="navbar-item" {{#ifeq ../section key}}class="active"{{else}}{{/ifeq}}>
+								<a class="navbar-link" href="{{ href }}">{{ label }}</a>
+							</li>
+							{{/each}}
+						</ul>
+					</div>
+				</nav>
+			</div>
+			
+		</header>
+		
+		<!--
+			Flash messages allow you to display once-off status messages to users, e.g. form
+			validation errors, success messages, etc
+		-->
+		
+		<!-- The content block should contain the body of your template's content-->
+		<main>{{{body}}}</main>
+		
+		<div id="footer" class="container full-width">
+			<div class="container">
+				<div class="eight columns">
+					<ul class="footerlinks">
+					{{# each footerLinks}}
+					<li {{#ifeq ../section key}}class="active"{{else}}{{/ifeq}}>
+						<a  href="{{ href }}">{{ label }}</a>
+					</li>
+					{{/each}}
+				</ul>
+
+				
+				</div>
+				<div class="eight columns">
+					<p>&copy;2009-2015 INHERITANCE magazine and the individual contributors. All rights reserved.</p>
+			
+					</div>
+			</div>
+		</div>
+		{{!--
+		//- jQuery 1.11.1 is included by default, and required by both Bootstrap
+		//- and the KeystoneJS Content Editor. If you are not targeting IE8,
+		//- you can upgrade to 2.1.1 (also bundled) for better performance.
+		--}}
+		<script src="/js/lib/jquery/jquery-1.11.1.min.js"></script>
+		{{!--
+		//- Customise which Bootstrap javascript files are served by including
+		//- them specifically here, instead of bootstrap-3.2.0.min.js
+		--}}
+		<script src="/js/lib/bootstrap/bootstrap-3.2.0.min.js"></script>
+		{{{isAdminEditorJS user}}}
+	</body>
+</html>

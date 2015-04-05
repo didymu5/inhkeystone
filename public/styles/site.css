@@ -1,0 +1,647 @@
+@import url("//fonts.googleapis.com/css?family=News+Cycle:400,700");
+@import url("//fonts.googleapis.com/css?family=News+Cycle:400,700");
+@import url("//fonts.googleapis.com/css?family=News+Cycle:400,700");
+/**
+ * SASS/SCSS/Compass Transcription of Skeleton Responsive Grid
+ * originally authored by Dave Gamache. This translation offers
+ * mixins that support fluid and as well as fixed grids to supplement
+ * the work that Dave Gamache has done.
+ * @author Dennis Thompson <http://www.atomicpages.net>
+ * @copyright Copyright (c) 2013 AtomicPages LLC
+ * @license MIT
+ * @version 1.6.3
+ */
+/* RESET & BASICS (Inspired by E. Meyers)
+ * ------------------------------------------------ */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+  blockquote:before, blockquote:after, q:before, q:after {
+    content: "";
+    content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* BASIC STYLES
+ * ------------------------------------------------ */
+body {
+  background: #fff;
+  font-size: 14px;
+  font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 21px;
+  color: #444;
+  -webkit-font-smoothing: antialiased;
+  /* Fix for webkit rendering */
+  -webkit-text-size-adjust: 100%; }
+
+/* TYPOGRAPHY
+ * ------------------------------------------------ */
+h1, h2, h3, h4, h5, h6 {
+  color: #181818;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-weight: normal; }
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  font-weight: inherit; }
+
+h1 {
+  font-size: 54px;
+  line-height: 58px;
+  margin-bottom: 16px; }
+
+h2 {
+  font-size: 41px;
+  line-height: 47px;
+  margin-bottom: 12px; }
+
+h3 {
+  font-size: 33px;
+  line-height: 40px;
+  margin-bottom: 9px; }
+
+h4 {
+  font-size: 25px;
+  line-height: 35px;
+  margin-bottom: 5px; }
+
+h5 {
+  font-size: 20px;
+  line-height: 28px; }
+
+h6 {
+  font-size: 16px;
+  line-height: 25px; }
+
+.subheader {
+  color: #777; }
+
+p {
+  margin: 0 0 20px 0; }
+  p img {
+    margin: 0; }
+  p.lead {
+    font-size: 25px;
+    line-height: 32px;
+    color: #777; }
+
+em, i {
+  font-style: italic; }
+
+strong, b {
+  font-weight: bold;
+  color: #333; }
+
+u {
+  text-decoration: underline; }
+
+small {
+  font-size: 80%; }
+
+/*	Blockquotes  */
+blockquote, blockquote p {
+  font-size: 20px;
+  line-height: 28px;
+  color: #777;
+  font-style: italic; }
+
+blockquote {
+  margin: 0 0 20px;
+  padding: 9px 20px 0 19px;
+  border-left: 1px solid #ddd; }
+
+blockquote cite {
+  display: block;
+  font-size: 14px;
+  color: #555; }
+  blockquote cite:before {
+    content: "\2014 \0020"; }
+  blockquote cite a, blockquote cite a:visited {
+    color: #555; }
+
+hr {
+  border-style: solid;
+  border-color: #ddd;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 10px 0 30px;
+  height: 0; }
+
+/* LINKS
+ * ------------------------------------------------ */
+a, a:visited {
+  color: #333;
+  text-decoration: underline;
+  outline: 0; }
+
+a:hover, a:focus, a:active {
+  color: #000; }
+
+p a, p a:visited {
+  line-height: inherit; }
+
+/* LISTS
+ * ------------------------------------------------ */
+ul, ol {
+  margin-bottom: 20px; }
+
+ul {
+  list-style: none outside; }
+
+ol {
+  list-style: decimal; }
+
+ol, ul.square, ul.circle, ul.disc {
+  margin-left: 30px; }
+
+ul.square {
+  list-style: square outside; }
+
+ul.circle {
+  list-style: circle outside; }
+
+ul.disc {
+  list-style: disc outside; }
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-top: 4px;
+  margin-right: 0;
+  margin-bottom: 5px;
+  margin-left: 30px;
+  font-size: 90%; }
+
+ul ul li, ul ol li, ol ol li, ol ul li {
+  margin-bottom: 6px; }
+
+li {
+  line-height: 18px;
+  margin-bottom: 12px; }
+
+ul.large li {
+  line-height: 21px; }
+
+li p {
+  line-height: 21px; }
+
+/* IMAGES
+ * ------------------------------------------------ */
+img.scale-with-grid {
+  max-width: 100%;
+  height: auto; }
+
+/* BUTTONS
+ * ------------------------------------------------ */
+.button, button, input[type="submit"], input[type="reset"], input[type="button"] {
+  background: #eeeeee -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.2)), color-stop(100%, rgba(0, 0, 0, 0.2)));
+  background: #eeeeee -webkit-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+  background: #eeeeee -moz-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+  background: #eeeeee -o-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+  background: #eeeeee linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+  border: 1px solid #aaa;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  color: #444;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: bold;
+  font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+  line-height: normal;
+  padding: 8px 10px; }
+  .button:hover, button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover {
+    color: #222;
+    background: #dddddd -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.3)), color-stop(100%, rgba(0, 0, 0, 0.3)));
+    background: #dddddd -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
+    background: #dddddd -moz-linear-gradient(top, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
+    background: #dddddd -o-linear-gradient(top, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
+    background: #dddddd linear-gradient(top, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
+    border: 1px solid #888;
+    border-top-color: #aaa;
+    border-left-color: #aaa; }
+  .button:active, button:active, input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:active {
+    border: 1px solid #666;
+    background: #cccccc -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.35)), color-stop(100%, rgba(10, 10, 10, 0.4)));
+    background: #cccccc -webkit-linear-gradient(top, rgba(255, 255, 255, 0.35) 0%, rgba(10, 10, 10, 0.4) 100%);
+    background: #cccccc -moz-linear-gradient(top, rgba(255, 255, 255, 0.35) 0%, rgba(10, 10, 10, 0.4) 100%);
+    background: #cccccc -o-linear-gradient(top, rgba(255, 255, 255, 0.35) 0%, rgba(10, 10, 10, 0.4) 100%);
+    background: #cccccc linear-gradient(top, rgba(255, 255, 255, 0.35) 0%, rgba(10, 10, 10, 0.4) 100%); }
+  .button.full-width, .button#issue-banner, button.full-width, button#issue-banner, input[type="submit"].full-width, input[type="submit"]#issue-banner, input[type="reset"].full-width, input[type="reset"]#issue-banner, input[type="button"].full-width, input[type="button"]#issue-banner {
+    width: 100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align: center; }
+  .button.smaller, button.smaller, input[type="submit"].smaller, input[type="reset"].smaller, input[type="button"].smaller {
+    font-size: 12px;
+    padding: 4px 5px; }
+  .button.larger, button.larger, input[type="submit"].larger, input[type="reset"].larger, input[type="button"].larger {
+    font-size: 16px;
+    padding: 10px 18px; }
+
+/* Fix for odd Mozilla border & padding issues */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/* FORMS
+ * ------------------------------------------------ */
+form {
+  margin-bottom: 20px; }
+
+fieldset {
+  margin-bottom: 20px; }
+
+input[type="text"], input[type="password"], input[type="email"], input[type="search"], input[type="url"], input[type="tel"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="time"], input[type="number"], textarea, select {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 6px 4px;
+  outline: none;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  font-size: 15px;
+  font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
+  color: #777;
+  margin: 0 0 20px;
+  width: 210px;
+  max-width: 100%;
+  display: block; }
+  input[type="text"]:hover, input[type="text"]:focus, input[type="password"]:hover, input[type="password"]:focus, input[type="email"]:hover, input[type="email"]:focus, input[type="search"]:hover, input[type="search"]:focus, input[type="url"]:hover, input[type="url"]:focus, input[type="tel"]:hover, input[type="tel"]:focus, input[type="date"]:hover, input[type="date"]:focus, input[type="datetime"]:hover, input[type="datetime"]:focus, input[type="datetime-local"]:hover, input[type="datetime-local"]:focus, input[type="month"]:hover, input[type="month"]:focus, input[type="week"]:hover, input[type="week"]:focus, input[type="time"]:hover, input[type="time"]:focus, input[type="number"]:hover, input[type="number"]:focus, textarea:hover, textarea:focus, select:hover, select:focus {
+    border: 1px solid #aaa;
+    color: #444;
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); }
+  input[type="text"]:active, input[type="password"]:active, input[type="email"]:active, input[type="search"]:active, input[type="url"]:active, input[type="tel"]:active, input[type="date"]:active, input[type="datetime"]:active, input[type="datetime-local"]:active, input[type="month"]:active, input[type="week"]:active, input[type="time"]:active, input[type="number"]:active, textarea:active, select:active {
+    border: 1px solid #909090;
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); }
+
+select {
+  padding: 0; }
+
+textarea {
+  min-height: 60px; }
+
+label, legend {
+  display: block;
+  font-size: 15px;
+  font-weight: bold; }
+
+select {
+  width: 220px; }
+
+input[type="checkbox"] {
+  display: inline; }
+
+label span, legend span {
+  font-size: 15px;
+  font-weight: normal;
+  color: #444; }
+
+/* MISC
+ * ------------------------------------------------ */
+.subtract-bottom {
+  margin-bottom: -20px !important; }
+
+.remove-bottom {
+  margin-bottom: 0 !important; }
+
+.half-bottom {
+  margin-bottom: 10px !important; }
+
+.add-bottom {
+  margin-bottom: 20px !important; }
+
+/**
+ * SASS/SCSS/Compass Transcription of Skeleton Responsive Grid
+ * originally authored by Dave Gamache. This translation offers
+ * mixins that support fluid and as well as fixed grids to supplement
+ * the work that Dave Gamache has done.
+ * @author Dennis Thompson <http://www.atomicpages.net>
+ * @copyright Copyright (c) 2013 AtomicPages LLC
+ * @license MIT
+ * @version 1.6.3
+ */
+/* BASE GRID
+ * ------------------------------------------------ */
+.container, .full-width, #issue-banner {
+  position: relative;
+  width: 1280px;
+  margin: 0 auto;
+  padding: 0; }
+  .container .column, .full-width .column, #issue-banner .column, .container .columns, .full-width .columns, #issue-banner .columns, .container .lead-cover-text, .full-width .lead-cover-text, #issue-banner .lead-cover-text, .container .cover-article, .full-width .cover-article, #issue-banner .cover-article, .container .article-card, .full-width .article-card, #issue-banner .article-card {
+    float: left;
+    display: inline;
+    position: relative; }
+    .container .column.alpha, .full-width .column.alpha, #issue-banner .column.alpha, .container .columns.alpha, .full-width .columns.alpha, #issue-banner .columns.alpha, .container .alpha.lead-cover-text, .full-width .alpha.lead-cover-text, #issue-banner .alpha.lead-cover-text, .container .alpha.cover-article, .full-width .alpha.cover-article, #issue-banner .alpha.cover-article, .container .alpha.article-card, .full-width .alpha.article-card, #issue-banner .alpha.article-card {
+      margin-left: 0; }
+    .container .column.omega, .full-width .column.omega, #issue-banner .column.omega, .container .columns.omega, .full-width .columns.omega, #issue-banner .columns.omega, .container .omega.lead-cover-text, .full-width .omega.lead-cover-text, #issue-banner .omega.lead-cover-text, .container .omega.cover-article, .full-width .omega.cover-article, #issue-banner .omega.cover-article, .container .omega.article-card, .full-width .omega.article-card, #issue-banner .omega.article-card {
+      margin-right: 0; }
+
+.row {
+  margin-bottom: 20px; }
+
+/* Overrides */
+.container .column, .full-width .column, #issue-banner .column, .container .columns, .full-width .columns, #issue-banner .columns, .container .lead-cover-text, .full-width .lead-cover-text, #issue-banner .lead-cover-text, .container .cover-article, .full-width .cover-article, #issue-banner .cover-article, .container .article-card, .full-width .article-card, #issue-banner .article-card {
+  margin-left: 1%;
+  margin-right: 1%; }
+
+.container .one.column, .full-width .one.column, #issue-banner .one.column, .container .one.columns, .full-width .one.columns, #issue-banner .one.columns, .container .one.lead-cover-text, .full-width .one.lead-cover-text, #issue-banner .one.lead-cover-text, .container .one.cover-article, .full-width .one.cover-article, #issue-banner .one.cover-article, .container .one.article-card, .full-width .one.article-card, #issue-banner .one.article-card {
+  width: 4.25%; }
+.container .two.columns, .full-width .two.columns, #issue-banner .two.columns, .container .two.lead-cover-text, .full-width .two.lead-cover-text, #issue-banner .two.lead-cover-text, .container .two.cover-article, .full-width .two.cover-article, #issue-banner .two.cover-article, .container .two.article-card, .full-width .two.article-card, #issue-banner .two.article-card {
+  width: 10.5%; }
+.container .three.columns, .full-width .three.columns, #issue-banner .three.columns, .container .three.lead-cover-text, .full-width .three.lead-cover-text, #issue-banner .three.lead-cover-text, .container .three.cover-article, .full-width .three.cover-article, #issue-banner .three.cover-article, .container .three.article-card, .full-width .three.article-card, #issue-banner .three.article-card {
+  width: 16.75%; }
+.container .four.columns, .full-width .four.columns, #issue-banner .four.columns, .container header.global .navbar-brand, header.global .container .navbar-brand, .full-width header.global .navbar-brand, header.global .full-width .navbar-brand, #issue-banner header.global .navbar-brand, header.global #issue-banner .navbar-brand, .container header.global .navbar-brand img.inh-logo, header.global .navbar-brand .container img.inh-logo, .full-width header.global .navbar-brand img.inh-logo, header.global .navbar-brand .full-width img.inh-logo, #issue-banner header.global .navbar-brand img.inh-logo, header.global .navbar-brand #issue-banner img.inh-logo, .container .four.lead-cover-text, .full-width .four.lead-cover-text, #issue-banner .four.lead-cover-text, .container .four.cover-article, .full-width .four.cover-article, #issue-banner .four.cover-article, .container .four.article-card, .full-width .four.article-card, #issue-banner .four.article-card {
+  width: 23%; }
+.container .five.columns, .full-width .five.columns, #issue-banner .five.columns, .container .five.lead-cover-text, .full-width .five.lead-cover-text, #issue-banner .five.lead-cover-text, .container .five.cover-article, .full-width .five.cover-article, #issue-banner .five.cover-article, .container .article-card, .full-width .article-card, #issue-banner .article-card {
+  width: 29.25%; }
+.container .six.columns, .full-width .six.columns, #issue-banner .six.columns, .container .navbar, .full-width .navbar, #issue-banner .navbar, .container .navbar-spacer, .full-width .navbar-spacer, #issue-banner .navbar-spacer, .container .lead-cover-text, .full-width .lead-cover-text, #issue-banner .lead-cover-text, .container .six.cover-article, .full-width .six.cover-article, #issue-banner .six.cover-article, .container .six.article-card, .full-width .six.article-card, #issue-banner .six.article-card {
+  width: 35.5%; }
+.container .seven.columns, .full-width .seven.columns, #issue-banner .seven.columns, .container .seven.lead-cover-text, .full-width .seven.lead-cover-text, #issue-banner .seven.lead-cover-text, .container .seven.cover-article, .full-width .seven.cover-article, #issue-banner .seven.cover-article, .container .seven.article-card, .full-width .seven.article-card, #issue-banner .seven.article-card {
+  width: 41.75%; }
+.container .eight.columns, .full-width .eight.columns, #issue-banner .eight.columns, .container .eight.lead-cover-text, .full-width .eight.lead-cover-text, #issue-banner .eight.lead-cover-text, .container .eight.cover-article, .full-width .eight.cover-article, #issue-banner .eight.cover-article, .container .eight.article-card, .full-width .eight.article-card, #issue-banner .eight.article-card {
+  width: 48%; }
+.container .nine.columns, .full-width .nine.columns, #issue-banner .nine.columns, .container .nine.lead-cover-text, .full-width .nine.lead-cover-text, #issue-banner .nine.lead-cover-text, .container .nine.cover-article, .full-width .nine.cover-article, #issue-banner .nine.cover-article, .container .nine.article-card, .full-width .nine.article-card, #issue-banner .nine.article-card {
+  width: 54.25%; }
+.container .ten.columns, .full-width .ten.columns, #issue-banner .ten.columns, .container .ten.lead-cover-text, .full-width .ten.lead-cover-text, #issue-banner .ten.lead-cover-text, .container .cover-article, .full-width .cover-article, #issue-banner .cover-article, .container .ten.article-card, .full-width .ten.article-card, #issue-banner .ten.article-card {
+  width: 60.5%; }
+.container .eleven.columns, .full-width .eleven.columns, #issue-banner .eleven.columns, .container .eleven.lead-cover-text, .full-width .eleven.lead-cover-text, #issue-banner .eleven.lead-cover-text, .container .eleven.cover-article, .full-width .eleven.cover-article, #issue-banner .eleven.cover-article, .container .eleven.article-card, .full-width .eleven.article-card, #issue-banner .eleven.article-card {
+  width: 66.75%; }
+.container .twelve.columns, .full-width .twelve.columns, #issue-banner .twelve.columns, .container .twelve.lead-cover-text, .full-width .twelve.lead-cover-text, #issue-banner .twelve.lead-cover-text, .container .twelve.cover-article, .full-width .twelve.cover-article, #issue-banner .twelve.cover-article, .container .twelve.article-card, .full-width .twelve.article-card, #issue-banner .twelve.article-card {
+  width: 73%; }
+.container .thirteen.columns, .full-width .thirteen.columns, #issue-banner .thirteen.columns, .container .thirteen.lead-cover-text, .full-width .thirteen.lead-cover-text, #issue-banner .thirteen.lead-cover-text, .container .thirteen.cover-article, .full-width .thirteen.cover-article, #issue-banner .thirteen.cover-article, .container .thirteen.article-card, .full-width .thirteen.article-card, #issue-banner .thirteen.article-card {
+  width: 79.25%; }
+.container .fourteen.columns, .full-width .fourteen.columns, #issue-banner .fourteen.columns, .container .fourteen.lead-cover-text, .full-width .fourteen.lead-cover-text, #issue-banner .fourteen.lead-cover-text, .container .fourteen.cover-article, .full-width .fourteen.cover-article, #issue-banner .fourteen.cover-article, .container .fourteen.article-card, .full-width .fourteen.article-card, #issue-banner .fourteen.article-card {
+  width: 85.5%; }
+.container .fifteen.columns, .full-width .fifteen.columns, #issue-banner .fifteen.columns, .container .fifteen.lead-cover-text, .full-width .fifteen.lead-cover-text, #issue-banner .fifteen.lead-cover-text, .container .fifteen.cover-article, .full-width .fifteen.cover-article, #issue-banner .fifteen.cover-article, .container .fifteen.article-card, .full-width .fifteen.article-card, #issue-banner .fifteen.article-card {
+  width: 91.75%; }
+.container .sixteen.columns, .full-width .sixteen.columns, #issue-banner .sixteen.columns, .container .sixteen.lead-cover-text, .full-width .sixteen.lead-cover-text, #issue-banner .sixteen.lead-cover-text, .container .sixteen.cover-article, .full-width .sixteen.cover-article, #issue-banner .sixteen.cover-article, .container .sixteen.article-card, .full-width .sixteen.article-card, #issue-banner .sixteen.article-card {
+  width: 98%; }
+.container .columns.one-third, .full-width .columns.one-third, #issue-banner .columns.one-third, .container .one-third.lead-cover-text, .full-width .one-third.lead-cover-text, #issue-banner .one-third.lead-cover-text, .container .one-third.cover-article, .full-width .one-third.cover-article, #issue-banner .one-third.cover-article, .container .one-third.article-card, .full-width .one-third.article-card, #issue-banner .one-third.article-card {
+  width: 30.66667%; }
+.container .columns.two-thirds, .full-width .columns.two-thirds, #issue-banner .columns.two-thirds, .container .two-thirds.lead-cover-text, .full-width .two-thirds.lead-cover-text, #issue-banner .two-thirds.lead-cover-text, .container .two-thirds.cover-article, .full-width .two-thirds.cover-article, #issue-banner .two-thirds.cover-article, .container .two-thirds.article-card, .full-width .two-thirds.article-card, #issue-banner .two-thirds.article-card {
+  width: 63.33333%; }
+.container .offset-by-one, .full-width .offset-by-one, #issue-banner .offset-by-one {
+  padding-left: 6.25%; }
+.container .offset-by-two, .full-width .offset-by-two, #issue-banner .offset-by-two {
+  padding-left: 12.5%; }
+.container .offset-by-three, .full-width .offset-by-three, #issue-banner .offset-by-three {
+  padding-left: 18.75%; }
+.container .offset-by-four, .full-width .offset-by-four, #issue-banner .offset-by-four {
+  padding-left: 25%; }
+.container .offset-by-five, .full-width .offset-by-five, #issue-banner .offset-by-five {
+  padding-left: 31.25%; }
+.container .offset-by-six, .full-width .offset-by-six, #issue-banner .offset-by-six {
+  padding-left: 37.5%; }
+.container .offset-by-seven, .full-width .offset-by-seven, #issue-banner .offset-by-seven {
+  padding-left: 43.75%; }
+.container .offset-by-eight, .full-width .offset-by-eight, #issue-banner .offset-by-eight {
+  padding-left: 50%; }
+.container .offset-by-nine, .full-width .offset-by-nine, #issue-banner .offset-by-nine {
+  padding-left: 56.25%; }
+.container .offset-by-ten, .full-width .offset-by-ten, #issue-banner .offset-by-ten {
+  padding-left: 62.5%; }
+.container .offset-by-eleven, .full-width .offset-by-eleven, #issue-banner .offset-by-eleven {
+  padding-left: 68.75%; }
+.container .offset-by-twelve, .full-width .offset-by-twelve, #issue-banner .offset-by-twelve {
+  padding-left: 75%; }
+.container .offset-by-thirteen, .full-width .offset-by-thirteen, #issue-banner .offset-by-thirteen {
+  padding-left: 81.25%; }
+.container .offset-by-fourteen, .full-width .offset-by-fourteen, #issue-banner .offset-by-fourteen {
+  padding-left: 87.5%; }
+.container .offset-by-fifteen, .full-width .offset-by-fifteen, #issue-banner .offset-by-fifteen {
+  padding-left: 93.75%; }
+
+/* TABLET (PORTRAIT)
+ * ------------------------------------------------ */
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+  .container, .full-width, #issue-banner {
+    width: 768px; }
+    .container .column.alpha, .full-width .column.alpha, #issue-banner .column.alpha, .container .columns.alpha, .full-width .columns.alpha, #issue-banner .columns.alpha, .container .alpha.lead-cover-text, .full-width .alpha.lead-cover-text, #issue-banner .alpha.lead-cover-text, .container .alpha.cover-article, .full-width .alpha.cover-article, #issue-banner .alpha.cover-article, .container .alpha.article-card, .full-width .alpha.article-card, #issue-banner .alpha.article-card {
+      margin-left: 0;
+      margin-right: 10px; }
+    .container .column.omega, .full-width .column.omega, #issue-banner .column.omega, .container .columns.omega, .full-width .columns.omega, #issue-banner .columns.omega, .container .omega.lead-cover-text, .full-width .omega.lead-cover-text, #issue-banner .omega.lead-cover-text, .container .omega.cover-article, .full-width .omega.cover-article, #issue-banner .omega.cover-article, .container .omega.article-card, .full-width .omega.article-card, #issue-banner .omega.article-card {
+      margin-right: 0;
+      margin-left: 10px; }
+  .alpha.omega {
+    margin-left: 0;
+    margin-right: 0; } }
+
+/*  MOBILE (PORTRAIT)
+ * ------------------------------------------------ */
+@media only screen and (max-width: 767px) {
+  .container, .full-width, #issue-banner {
+    width: 300px; }
+    .container .column, .full-width .column, #issue-banner .column, .container .columns, .full-width .columns, #issue-banner .columns, .container .lead-cover-text, .full-width .lead-cover-text, #issue-banner .lead-cover-text, .container .cover-article, .full-width .cover-article, #issue-banner .cover-article, .container .article-card, .full-width .article-card, #issue-banner .article-card {
+      margin-left: 0;
+      margin-right: 0; }
+    .container .one.column, .full-width .one.column, #issue-banner .one.column {
+      width: 300px; }
+    .container .one.columns, .full-width .one.columns, #issue-banner .one.columns, .container .one.lead-cover-text, .full-width .one.lead-cover-text, #issue-banner .one.lead-cover-text, .container .one.cover-article, .full-width .one.cover-article, #issue-banner .one.cover-article, .container .one.article-card, .full-width .one.article-card, #issue-banner .one.article-card, .container .two.columns, .full-width .two.columns, #issue-banner .two.columns, .container .two.lead-cover-text, .full-width .two.lead-cover-text, #issue-banner .two.lead-cover-text, .container .two.cover-article, .full-width .two.cover-article, #issue-banner .two.cover-article, .container .two.article-card, .full-width .two.article-card, #issue-banner .two.article-card, .container .three.columns, .full-width .three.columns, #issue-banner .three.columns, .container .three.lead-cover-text, .full-width .three.lead-cover-text, #issue-banner .three.lead-cover-text, .container .three.cover-article, .full-width .three.cover-article, #issue-banner .three.cover-article, .container .three.article-card, .full-width .three.article-card, #issue-banner .three.article-card, .container .four.columns, .full-width .four.columns, #issue-banner .four.columns, .container header.global .navbar-brand, header.global .container .navbar-brand, .full-width header.global .navbar-brand, header.global .full-width .navbar-brand, #issue-banner header.global .navbar-brand, header.global #issue-banner .navbar-brand, .container header.global .navbar-brand img.inh-logo, header.global .navbar-brand .container img.inh-logo, .full-width header.global .navbar-brand img.inh-logo, header.global .navbar-brand .full-width img.inh-logo, #issue-banner header.global .navbar-brand img.inh-logo, header.global .navbar-brand #issue-banner img.inh-logo, .container .four.lead-cover-text, .full-width .four.lead-cover-text, #issue-banner .four.lead-cover-text, .container .four.cover-article, .full-width .four.cover-article, #issue-banner .four.cover-article, .container .four.article-card, .full-width .four.article-card, #issue-banner .four.article-card, .container .five.columns, .full-width .five.columns, #issue-banner .five.columns, .container .five.lead-cover-text, .full-width .five.lead-cover-text, #issue-banner .five.lead-cover-text, .container .five.cover-article, .full-width .five.cover-article, #issue-banner .five.cover-article, .container .article-card, .full-width .article-card, #issue-banner .article-card, .container .six.columns, .full-width .six.columns, #issue-banner .six.columns, .container .navbar, .full-width .navbar, #issue-banner .navbar, .container .navbar-spacer, .full-width .navbar-spacer, #issue-banner .navbar-spacer, .container .lead-cover-text, .full-width .lead-cover-text, #issue-banner .lead-cover-text, .container .six.cover-article, .full-width .six.cover-article, #issue-banner .six.cover-article, .container .six.article-card, .full-width .six.article-card, #issue-banner .six.article-card, .container .seven.columns, .full-width .seven.columns, #issue-banner .seven.columns, .container .seven.lead-cover-text, .full-width .seven.lead-cover-text, #issue-banner .seven.lead-cover-text, .container .seven.cover-article, .full-width .seven.cover-article, #issue-banner .seven.cover-article, .container .seven.article-card, .full-width .seven.article-card, #issue-banner .seven.article-card, .container .eight.columns, .full-width .eight.columns, #issue-banner .eight.columns, .container .eight.lead-cover-text, .full-width .eight.lead-cover-text, #issue-banner .eight.lead-cover-text, .container .eight.cover-article, .full-width .eight.cover-article, #issue-banner .eight.cover-article, .container .eight.article-card, .full-width .eight.article-card, #issue-banner .eight.article-card, .container .nine.columns, .full-width .nine.columns, #issue-banner .nine.columns, .container .nine.lead-cover-text, .full-width .nine.lead-cover-text, #issue-banner .nine.lead-cover-text, .container .nine.cover-article, .full-width .nine.cover-article, #issue-banner .nine.cover-article, .container .nine.article-card, .full-width .nine.article-card, #issue-banner .nine.article-card, .container .ten.columns, .full-width .ten.columns, #issue-banner .ten.columns, .container .ten.lead-cover-text, .full-width .ten.lead-cover-text, #issue-banner .ten.lead-cover-text, .container .cover-article, .full-width .cover-article, #issue-banner .cover-article, .container .ten.article-card, .full-width .ten.article-card, #issue-banner .ten.article-card, .container .eleven.columns, .full-width .eleven.columns, #issue-banner .eleven.columns, .container .eleven.lead-cover-text, .full-width .eleven.lead-cover-text, #issue-banner .eleven.lead-cover-text, .container .eleven.cover-article, .full-width .eleven.cover-article, #issue-banner .eleven.cover-article, .container .eleven.article-card, .full-width .eleven.article-card, #issue-banner .eleven.article-card, .container .twelve.columns, .full-width .twelve.columns, #issue-banner .twelve.columns, .container .twelve.lead-cover-text, .full-width .twelve.lead-cover-text, #issue-banner .twelve.lead-cover-text, .container .twelve.cover-article, .full-width .twelve.cover-article, #issue-banner .twelve.cover-article, .container .twelve.article-card, .full-width .twelve.article-card, #issue-banner .twelve.article-card, .container .thirteen.columns, .full-width .thirteen.columns, #issue-banner .thirteen.columns, .container .thirteen.lead-cover-text, .full-width .thirteen.lead-cover-text, #issue-banner .thirteen.lead-cover-text, .container .thirteen.cover-article, .full-width .thirteen.cover-article, #issue-banner .thirteen.cover-article, .container .thirteen.article-card, .full-width .thirteen.article-card, #issue-banner .thirteen.article-card, .container .fourteen.columns, .full-width .fourteen.columns, #issue-banner .fourteen.columns, .container .fourteen.lead-cover-text, .full-width .fourteen.lead-cover-text, #issue-banner .fourteen.lead-cover-text, .container .fourteen.cover-article, .full-width .fourteen.cover-article, #issue-banner .fourteen.cover-article, .container .fourteen.article-card, .full-width .fourteen.article-card, #issue-banner .fourteen.article-card, .container .fifteen.columns, .full-width .fifteen.columns, #issue-banner .fifteen.columns, .container .fifteen.lead-cover-text, .full-width .fifteen.lead-cover-text, #issue-banner .fifteen.lead-cover-text, .container .fifteen.cover-article, .full-width .fifteen.cover-article, #issue-banner .fifteen.cover-article, .container .fifteen.article-card, .full-width .fifteen.article-card, #issue-banner .fifteen.article-card, .container .sixteen.columns, .full-width .sixteen.columns, #issue-banner .sixteen.columns, .container .sixteen.lead-cover-text, .full-width .sixteen.lead-cover-text, #issue-banner .sixteen.lead-cover-text, .container .sixteen.cover-article, .full-width .sixteen.cover-article, #issue-banner .sixteen.cover-article, .container .sixteen.article-card, .full-width .sixteen.article-card, #issue-banner .sixteen.article-card {
+      width: 300px; }
+    .container .one-third.column, .full-width .one-third.column, #issue-banner .one-third.column {
+      width: 300px; }
+    .container .two-third.column, .full-width .two-third.column, #issue-banner .two-third.column {
+      width: 300px; }
+    .container .offset-by-one, .full-width .offset-by-one, #issue-banner .offset-by-one, .container .offset-by-two, .full-width .offset-by-two, #issue-banner .offset-by-two, .container .offset-by-three, .full-width .offset-by-three, #issue-banner .offset-by-three, .container .offset-by-four, .full-width .offset-by-four, #issue-banner .offset-by-four, .container .offset-by-five, .full-width .offset-by-five, #issue-banner .offset-by-five, .container .offset-by-six, .full-width .offset-by-six, #issue-banner .offset-by-six, .container .offset-by-seven, .full-width .offset-by-seven, #issue-banner .offset-by-seven, .container .offset-by-eight, .full-width .offset-by-eight, #issue-banner .offset-by-eight, .container .offset-by-nine, .full-width .offset-by-nine, #issue-banner .offset-by-nine, .container .offset-by-ten, .full-width .offset-by-ten, #issue-banner .offset-by-ten, .container .offset-by-eleven, .full-width .offset-by-eleven, #issue-banner .offset-by-eleven, .container .offset-by-twelve, .full-width .offset-by-twelve, #issue-banner .offset-by-twelve, .container .offset-by-thirteen, .full-width .offset-by-thirteen, #issue-banner .offset-by-thirteen, .container .offset-by-fourteen, .full-width .offset-by-fourteen, #issue-banner .offset-by-fourteen, .container .offset-by-fifteen, .full-width .offset-by-fifteen, #issue-banner .offset-by-fifteen {
+      padding-left: 0; } }
+
+/* MOBILE (LANDSCAPE)
+ * ------------------------------------------------ */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .container, .full-width, #issue-banner {
+    width: 420px; }
+    .container .column, .full-width .column, #issue-banner .column, .container .columns, .full-width .columns, #issue-banner .columns, .container .lead-cover-text, .full-width .lead-cover-text, #issue-banner .lead-cover-text, .container .cover-article, .full-width .cover-article, #issue-banner .cover-article, .container .article-card, .full-width .article-card, #issue-banner .article-card {
+      margin-left: 0;
+      margin-right: 0; }
+    .container .one.column, .full-width .one.column, #issue-banner .one.column {
+      width: 420px; }
+    .container .one.columns, .full-width .one.columns, #issue-banner .one.columns, .container .one.lead-cover-text, .full-width .one.lead-cover-text, #issue-banner .one.lead-cover-text, .container .one.cover-article, .full-width .one.cover-article, #issue-banner .one.cover-article, .container .one.article-card, .full-width .one.article-card, #issue-banner .one.article-card, .container .two.columns, .full-width .two.columns, #issue-banner .two.columns, .container .two.lead-cover-text, .full-width .two.lead-cover-text, #issue-banner .two.lead-cover-text, .container .two.cover-article, .full-width .two.cover-article, #issue-banner .two.cover-article, .container .two.article-card, .full-width .two.article-card, #issue-banner .two.article-card, .container .three.columns, .full-width .three.columns, #issue-banner .three.columns, .container .three.lead-cover-text, .full-width .three.lead-cover-text, #issue-banner .three.lead-cover-text, .container .three.cover-article, .full-width .three.cover-article, #issue-banner .three.cover-article, .container .three.article-card, .full-width .three.article-card, #issue-banner .three.article-card, .container .four.columns, .full-width .four.columns, #issue-banner .four.columns, .container header.global .navbar-brand, header.global .container .navbar-brand, .full-width header.global .navbar-brand, header.global .full-width .navbar-brand, #issue-banner header.global .navbar-brand, header.global #issue-banner .navbar-brand, .container header.global .navbar-brand img.inh-logo, header.global .navbar-brand .container img.inh-logo, .full-width header.global .navbar-brand img.inh-logo, header.global .navbar-brand .full-width img.inh-logo, #issue-banner header.global .navbar-brand img.inh-logo, header.global .navbar-brand #issue-banner img.inh-logo, .container .four.lead-cover-text, .full-width .four.lead-cover-text, #issue-banner .four.lead-cover-text, .container .four.cover-article, .full-width .four.cover-article, #issue-banner .four.cover-article, .container .four.article-card, .full-width .four.article-card, #issue-banner .four.article-card, .container .five.columns, .full-width .five.columns, #issue-banner .five.columns, .container .five.lead-cover-text, .full-width .five.lead-cover-text, #issue-banner .five.lead-cover-text, .container .five.cover-article, .full-width .five.cover-article, #issue-banner .five.cover-article, .container .article-card, .full-width .article-card, #issue-banner .article-card, .container .six.columns, .full-width .six.columns, #issue-banner .six.columns, .container .navbar, .full-width .navbar, #issue-banner .navbar, .container .navbar-spacer, .full-width .navbar-spacer, #issue-banner .navbar-spacer, .container .lead-cover-text, .full-width .lead-cover-text, #issue-banner .lead-cover-text, .container .six.cover-article, .full-width .six.cover-article, #issue-banner .six.cover-article, .container .six.article-card, .full-width .six.article-card, #issue-banner .six.article-card, .container .seven.columns, .full-width .seven.columns, #issue-banner .seven.columns, .container .seven.lead-cover-text, .full-width .seven.lead-cover-text, #issue-banner .seven.lead-cover-text, .container .seven.cover-article, .full-width .seven.cover-article, #issue-banner .seven.cover-article, .container .seven.article-card, .full-width .seven.article-card, #issue-banner .seven.article-card, .container .eight.columns, .full-width .eight.columns, #issue-banner .eight.columns, .container .eight.lead-cover-text, .full-width .eight.lead-cover-text, #issue-banner .eight.lead-cover-text, .container .eight.cover-article, .full-width .eight.cover-article, #issue-banner .eight.cover-article, .container .eight.article-card, .full-width .eight.article-card, #issue-banner .eight.article-card, .container .nine.columns, .full-width .nine.columns, #issue-banner .nine.columns, .container .nine.lead-cover-text, .full-width .nine.lead-cover-text, #issue-banner .nine.lead-cover-text, .container .nine.cover-article, .full-width .nine.cover-article, #issue-banner .nine.cover-article, .container .nine.article-card, .full-width .nine.article-card, #issue-banner .nine.article-card, .container .ten.columns, .full-width .ten.columns, #issue-banner .ten.columns, .container .ten.lead-cover-text, .full-width .ten.lead-cover-text, #issue-banner .ten.lead-cover-text, .container .cover-article, .full-width .cover-article, #issue-banner .cover-article, .container .ten.article-card, .full-width .ten.article-card, #issue-banner .ten.article-card, .container .eleven.columns, .full-width .eleven.columns, #issue-banner .eleven.columns, .container .eleven.lead-cover-text, .full-width .eleven.lead-cover-text, #issue-banner .eleven.lead-cover-text, .container .eleven.cover-article, .full-width .eleven.cover-article, #issue-banner .eleven.cover-article, .container .eleven.article-card, .full-width .eleven.article-card, #issue-banner .eleven.article-card, .container .twelve.columns, .full-width .twelve.columns, #issue-banner .twelve.columns, .container .twelve.lead-cover-text, .full-width .twelve.lead-cover-text, #issue-banner .twelve.lead-cover-text, .container .twelve.cover-article, .full-width .twelve.cover-article, #issue-banner .twelve.cover-article, .container .twelve.article-card, .full-width .twelve.article-card, #issue-banner .twelve.article-card, .container .thirteen.columns, .full-width .thirteen.columns, #issue-banner .thirteen.columns, .container .thirteen.lead-cover-text, .full-width .thirteen.lead-cover-text, #issue-banner .thirteen.lead-cover-text, .container .thirteen.cover-article, .full-width .thirteen.cover-article, #issue-banner .thirteen.cover-article, .container .thirteen.article-card, .full-width .thirteen.article-card, #issue-banner .thirteen.article-card, .container .fourteen.columns, .full-width .fourteen.columns, #issue-banner .fourteen.columns, .container .fourteen.lead-cover-text, .full-width .fourteen.lead-cover-text, #issue-banner .fourteen.lead-cover-text, .container .fourteen.cover-article, .full-width .fourteen.cover-article, #issue-banner .fourteen.cover-article, .container .fourteen.article-card, .full-width .fourteen.article-card, #issue-banner .fourteen.article-card, .container .fifteen.columns, .full-width .fifteen.columns, #issue-banner .fifteen.columns, .container .fifteen.lead-cover-text, .full-width .fifteen.lead-cover-text, #issue-banner .fifteen.lead-cover-text, .container .fifteen.cover-article, .full-width .fifteen.cover-article, #issue-banner .fifteen.cover-article, .container .fifteen.article-card, .full-width .fifteen.article-card, #issue-banner .fifteen.article-card, .container .sixteen.columns, .full-width .sixteen.columns, #issue-banner .sixteen.columns, .container .sixteen.lead-cover-text, .full-width .sixteen.lead-cover-text, #issue-banner .sixteen.lead-cover-text, .container .sixteen.cover-article, .full-width .sixteen.cover-article, #issue-banner .sixteen.cover-article, .container .sixteen.article-card, .full-width .sixteen.article-card, #issue-banner .sixteen.article-card {
+      width: 420px; }
+    .container .one-third.column, .full-width .one-third.column, #issue-banner .one-third.column {
+      width: 420px; }
+    .container .two-third.column, .full-width .two-third.column, #issue-banner .two-third.column {
+      width: 420px; }
+    .container .offset-by-one, .full-width .offset-by-one, #issue-banner .offset-by-one, .container .offset-by-two, .full-width .offset-by-two, #issue-banner .offset-by-two, .container .offset-by-three, .full-width .offset-by-three, #issue-banner .offset-by-three, .container .offset-by-four, .full-width .offset-by-four, #issue-banner .offset-by-four, .container .offset-by-five, .full-width .offset-by-five, #issue-banner .offset-by-five, .container .offset-by-six, .full-width .offset-by-six, #issue-banner .offset-by-six, .container .offset-by-seven, .full-width .offset-by-seven, #issue-banner .offset-by-seven, .container .offset-by-eight, .full-width .offset-by-eight, #issue-banner .offset-by-eight, .container .offset-by-nine, .full-width .offset-by-nine, #issue-banner .offset-by-nine, .container .offset-by-ten, .full-width .offset-by-ten, #issue-banner .offset-by-ten, .container .offset-by-eleven, .full-width .offset-by-eleven, #issue-banner .offset-by-eleven, .container .offset-by-twelve, .full-width .offset-by-twelve, #issue-banner .offset-by-twelve, .container .offset-by-thirteen, .full-width .offset-by-thirteen, #issue-banner .offset-by-thirteen, .container .offset-by-fourteen, .full-width .offset-by-fourteen, #issue-banner .offset-by-fourteen, .container .offset-by-fifteen, .full-width .offset-by-fifteen, #issue-banner .offset-by-fifteen {
+      padding-left: 0; } }
+
+/* CLEARING
+ * ------------------------------------------------ */
+.container:after, .full-width:after, #issue-banner:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.clearfix, .row {
+  zoom: 1; }
+  .clearfix:before, .clearfix:after, .row:before, .row:after {
+    content: "\0020";
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0; }
+  .clearfix:after, .row:after {
+    clear: both; }
+
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0; }
+
+header.global .navbar-brand img.inh-logo {
+  width: 300px;
+  float: left; }
+header.global > .container, header.global > .full-width, header.global > #issue-banner {
+  margin-top: 2rem;
+  margin-bottom: 2rem; }
+
+.full-width, #issue-banner {
+  width: 100%; }
+
+#issue-banner {
+  position: relative;
+  display: block;
+  background: #ccc;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+  min-height: 150px;
+  margin-bottom: 2.5rem;
+  /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */ }
+  #issue-banner h2 {
+    margin-top: 60px; }
+  @media only screen and (max-width: 479px) {
+    #issue-banner {
+      min-height: 300px; } }
+
+.navbar + .docs-section {
+  border-top-width: 0; }
+
+.navbar, .navbar-spacer {
+  display: block;
+  max-width: 100%;
+  height: 2.5rem;
+  background: #fff;
+  z-index: 99;
+  margin-left: 3rem;
+  float: left; }
+
+.navbar-spacer {
+  display: none; }
+
+.navbar > .container, .navbar > .full-width, .navbar > #issue-banner {
+  width: 100%; }
+
+.navbar-list {
+  list-style: none;
+  margin-bottom: 0; }
+
+.navbar-item {
+  position: relative;
+  float: left;
+  margin-bottom: 0; }
+
+.navbar-link {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .2rem;
+  margin-right: 35px;
+  text-decoration: none;
+  line-height: 2.5rem;
+  color: #222; }
+
+.navbar-link.active {
+  color: #33C3F0; }
+
+.has-docked-nav .navbar {
+  position: fixed;
+  top: 0;
+  left: 0; }
+
+.has-docked-nav .navbar-spacer {
+  display: block; }
+
+/* Re-overiding the width 100% declaration to match size of % based container */
+.has-docked-nav .navbar > .container, .has-docked-nav .navbar > .full-width, .has-docked-nav .navbar > #issue-banner {
+  width: 80%; }
+
+.img-responsive {
+  display: block;
+  margin-left: auto; }
+
+.lead-cover-text {
+  font-size: 150%;
+  line-height: 1.5rem;
+  border-top: 3px #000 solid;
+  padding-top: .5em; }
+
+.cover-article h3 {
+  font-size: 2rem !important; }
+
+.article-card {
+  height: auto;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px #00a0e4 solid;
+  min-height: 300px; }
+  .article-card h3 {
+    font-size: 150%;
+    line-height: 1em; }
+    .article-card h3 a {
+      text-decoration: none; }
+  .article-card .article-img {
+    width: 100%; }
+
+#footer {
+  border-top: 1px #ccc solid;
+  padding-top: 2em; }
+  #footer .footerlinks {
+    float: left; }
+    #footer .footerlinks li {
+      float: left;
+      color: #000;
+      padding-right: 2em; }
+      #footer .footerlinks li a {
+        color: #000;
+        font-size: 1.3em;
+        text-decoration: none; }

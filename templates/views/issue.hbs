@@ -1,0 +1,36 @@
+{{data.issue}}
+
+<hr>
+
+{{#if data.issues.length}}
+	{{#each data.issues}}
+	<p>{{name}} - {{content.brief.md}} - <a href="/issues/{{issueNumber}}">Issue {{issueNumber}}</a></p>
+	{{coverImage.url}}
+	{{/each}}
+{{/if}}
+
+
+{{#if data.issue}} {{!-- single issue--}}
+
+<hr>
+	<p>{{data.issue.name}}</p>
+	<p>Issue-{{data.issue.issueNumber}}</p>
+	<p>{{data.issue.content.brief.md}}</p>
+	{{data.issue.coverImage}}
+
+
+<hr>
+<h2>Post from issue {{data.issue.issueNumber}}</h2>
+
+
+<ul>
+	{{#each data.posts}}
+	{{this}}
+	<li>{{title}} - {{#each author}} {{name.first}} {{name.last}} - {{bio.md}} {{/each}} 
+		<img src="{{image.url}}" width="300"/> {{image}}
+	</li>
+	{{/each}}
+</ul>
+{{/if}}
+
+
