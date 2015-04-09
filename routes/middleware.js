@@ -25,8 +25,9 @@ exports.initLocals = function(req, res, next) {
 	
 	locals.navLinks = [
 		{ label: 'Issues',		key: 'Issues',		href: '/issues' },
-		{ label: 'Subscibe',		key: 'Subscibe',		href: '/subscribe' },
-		{ label: 'Give',		key: 'Give',		href: '/give' }
+		{ label: 'About',		key: 'About',		href: '/about' },
+		{ label: 'Subscribe',		key: 'Subscribe',		href: '/Subscribe' },
+		{ label: 'Give',		key: 'Give',		href: 'http://give.inheritancemag.com' }
 	];
 
 	locals.footerLinks = [

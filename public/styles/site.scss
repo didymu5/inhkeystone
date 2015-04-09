@@ -5,251 +5,285 @@
 @import "skeleton/skeleton";
 
 //header global
-header.global{
-	
-	.navbar-brand{
-		@extend .four.columns;
+header.global {
 
-		img.inh-logo{
-			@extend .four.columns;
-			width:300px;
-			float:left;
-		}
-	}
-	>.container{
-		margin-top:1rem;
-	margin-bottom:2rem;
-	}
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 1rem;
+    #inh-tagline{
+    	color:#000;
+    	text-transform: uppercase;
+    	letter-spacing: 5px;
+    	border-top: 1px solid #000;
+    	margin-top: 25px;
+    	p{
+    		text-align: center;
+    		background: #fff;
+    		padding-left: 15px;
+    		padding-right: 15px;
+    		margin-top: -15px;
+    		margin-right: auto;
+    		margin-left: auto;
+    		width:500px;
+    		 
+    	}
+    	em{
+    		font-style: normal;
+    		font-weight: bold;
+
+    	}
+    }
+    .inh-logo-main {
+        @extend .u-cf;
+
+        margin-right: auto;
+        margin-left: auto;
+        img.inh-logo {
+            max-width: 30rem;
+           
+        }
+    }
+    .navbar + .docs-section {
+        border-top-width: 0;
+    }
+    .navbar, .navbar-spacer {
+        text-align: center;
+        display: block;
+        height: 2.5rem;
+        background: #fff;
+        z-index: 99;
+        margin-right: auto;
+        margin-left: auto;
+        .navbar-list {
+            @extend .u-cf;
+            list-style: none;
+            margin-top: 15px;
+            margin-bottom: 0;
+            margin-right: auto;
+            margin-left: auto;
+            .navbar-item {
+                position: relative;
+                float: left;
+                margin-bottom: 0;
+            }
+            .navbar-link {
+                text-transform: uppercase;
+                font-size: 1.2rem;
+                font-weight: 600;
+                letter-spacing: .2rem;
+                margin:0 5rem;
+                text-decoration: none;
+                line-height: 2.5rem;
+                color: #222;
+            }
+        }
+        @media only screen and (max-width: $midSizeWidth) {
+            // width: 6rem !important;
+            #inh-tagline{
+            	font-size: 14px !important;
+            }
+            .navbar-list {
+				.navbar-link {
+					font-size:15px;
+					margin:0 1rem;
+				}
+            }
+            #inh-tagline{ 
+            	 	p{
+            	 		width:100% !important;
+            	 	}
+            	 }
+        }
+         @media only screen and (max-width: $mobileLandscapeWidth){ 
+            	 #inh-tagline{ 
+            	 	p{
+            	 		max-width: 100%;
+            	 	}
+            	 }
+            }
+    }
+    .navbar-spacer {
+        display: none;
+    }
+    .navbar > .container {
+        width: 100%;
+    }
+    .navbar-link.active {
+        color: #33C3F0;
+    }
+    .has-docked-nav .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    .has-docked-nav .navbar-spacer {
+        display: block;
+    }
+    /* Re-overiding the width 100% declaration to match size of % based container */
+    .has-docked-nav .navbar > .container {
+        width: 80%;
+    }
 }
 
-.full-width{
-	@extend .container;
-	width:100%;
-}
-
-#issue-banner{
-	$issue-banner-height : 150px;
-	@extend .container;
-	@extend .full-width;
-	@extend .u-cf;
-	position: relative;
-	display: block;
-	background:#ccc;
-	  -webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	text-align: center;
-	min-height: $issue-banner-height;
-	margin-bottom: 2.5rem;
-	h2{
-		margin-top: $issue-banner-height / 2.5;
-
-	}
-	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-	@media only screen and (max-width: 479px) {
-		min-height: 300px;
-	}
-
-}
-.navbar + .docs-section {
-    border-top-width: 0;
-}
-
-.navbar,
-.navbar-spacer {
-	@extend .columns;
-	@extend .six;
-    display: block;
-    max-width:100%;
-    height: 2.5rem;
-    background: #fff;
-    z-index: 99;
-    margin-left:3rem;
-    // border-top: 1px solid #eee;
-    // border-bottom: 1px solid #eee;
-    float:right;
-}
-
-.navbar-spacer {
-    display: none;
-}
-
-.navbar > .container {
+.full-width {
+    @extend .container;
     width: 100%;
 }
 
-.navbar-list {
-    list-style: none;
-    margin-bottom: 0;
-}
-
-.navbar-item {
+#issue-banner {
+    $issue-banner-height: 150px;
+    @extend .container;
+    @extend .full-width;
+    @extend .u-cf;
     position: relative;
-    float: left;
-    margin-bottom: 0;
-}
-
-.navbar-link {
-    text-transform: uppercase;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: .2rem;
-    margin-right: 35px;
-    text-decoration: none;
-    line-height: 2.5rem;
-    color: #222;
-}
-
-.navbar-link.active {
-    color: #33C3F0;
-}
-
-.has-docked-nav .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
-.has-docked-nav .navbar-spacer {
     display: block;
-}
-
-/* Re-overiding the width 100% declaration to match size of % based container */
-.has-docked-nav .navbar > .container {
-    width: 80%;
+    background: #ccc;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
+    min-height: $issue-banner-height;
+    margin-bottom: 2.5rem;
+    h2 {
+        margin-top: $issue-banner-height / 2.5;
+    }
+    /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+    @media only screen and (max-width: 479px) {
+        min-height: 300px;
+    }
 }
 
 .img-responsive {
     display: block;
     margin-left: auto;
 }
-.lead-cover-text{
-	@extend .columns;
-	@extend .six;
-	font-size: 150%;
-	line-height: 1.5rem;
-	border-top: 3px #000 solid;
-	padding-top: .5em;
+
+.lead-cover-text {
+    @extend .columns;
+    @extend .six;
+    font-size: 150%;
+    line-height: 1.5rem;
+    border-top: 3px #000 solid;
+    padding-top: .5em;
 }
-.cover-article{
-	@extend .columns;
-	@extend .ten;
-	h3{
-		font-size:2rem !important;
-	}
+
+.cover-article {
+    @extend .columns;
+    @extend .ten;
+    h3 {
+        font-size: 2rem !important;
+    }
 }
+
 .article-card {
-	@extend .columns;
-	@extend .five;
-	// border:1px #ccc solid;
-	height:auto;
-	margin-bottom: 20px;
-	padding-bottom: 20px;
-	border-bottom:2px $inhBlue solid;
-	min-height: 300px;
-	h3{
-		font-size:150%;
-		// border-top:2px $inhBlue solid;
-		line-height:1em;
-		a{
-			text-decoration: none;
-		}
-	}
-	.article-img{
-		width:100%;
-	}
+    @extend .columns;
+    @extend .five;
+    // border:1px #ccc solid;
+    height: auto;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px $inhBlue solid;
+    min-height: 300px;
+    h3 {
+        font-size: 150%;
+        // border-top:2px $inhBlue solid;
+        line-height: 1em;
+        a {
+            text-decoration: none;
+        }
+    }
+    .article-img {
+        width: 100%;
+    }
 }
 
 //article page
-.article-parent{
-	h1{
-		line-height: 1em;
-		
-		@media only screen and (max-width: $tabletWidth) {
-			font-size:200%;
-			margin-bottom: .5em;
-		}
-	}
-}
-.article-section{
-	@extend .columns;
-	@extend .ten;
-	
-	p{	
-		font-family: $readingFamily;
-		max-width:100%;
-		float:none !important;
-		margin-right: auto !important;
-		margin-left: auto !important;;
-		clear:both;
-		@media only screen and (max-width: $tabletWidth) {
-			max-width:100%;
-		}
-		img{
-			max-width: 100%;
-		}
-	}
-	blockquote{
-		width:150%;
-	}
-	@media only screen and (max-width: $midSizeWidth) {
-		
-		width:100% !important;
-		blockquote{
-			width:100%;
-		}
-		
-	}
-	@media only screen and (max-width: $tabletWidth) {
-			
-		}
-}
-.article-info{
-	@extend .columns;
-	@extend .five;
-	float:right !important;
-	border-top: 3px #000 solid;
-	margin-top: 3%;
-	@media only screen and (max-width: $midSizeWidth) {
-		position: relative !important;
-		float:left;
-		width:100% !important;
-		border-top: 1px #ccc solid;
-	}
-	@media only screen and (max-width: $tabletWidth) {
-		position: relative !important;
-		float:left;
-		border: 1px #000 solid;
-		width:100%;
-	}
-	h3{
-		font-size: 120%;
-	}
-	.badge-img{
-		float:right;
-		margin:8px;
-		display: inline;
-	}
-}
-.badge-img{
-	@include border-radius(50%);
+.article-parent {
+    h1 {
+        line-height: 1em;
+        @media only screen and (max-width: $tabletWidth) {
+            font-size: 200%;
+            margin-bottom: .5em;
+        }
+    }
 }
 
-#footer{
-	border-top:1px #ccc solid;
-	padding-top:2em;
-	.footerlinks{
-		float:left;
-		li{
-			float:left;
-			color:#000;
-			padding-right: 2em;
-			a{
-				color:#000;
-				font-size: 1.3em;
-				text-decoration: none;
-			}
-		}
-	}
+.article-section {
+    @extend .columns;
+    @extend .ten;
+    p {
+        font-family: $readingFamily;
+        max-width: 100%;
+        float: none !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
+        clear: both;
+        @media only screen and (max-width: $tabletWidth) {
+            max-width: 100%;
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+    blockquote {
+        width: 150%;
+    }
+    @media only screen and (max-width: $midSizeWidth) {
+        width: 100% !important;
+        blockquote {
+            width: 100%;
+        }
+    }
+    @media only screen and (max-width: $tabletWidth) {}
+}
+
+.article-info {
+    @extend .columns;
+    @extend .five;
+    float: right !important;
+    border-top: 3px #000 solid;
+    margin-top: 3%;
+    @media only screen and (max-width: $midSizeWidth) {
+        position: relative !important;
+        float: left;
+        width: 100% !important;
+        border-top: 1px #ccc solid;
+    }
+    @media only screen and (max-width: $tabletWidth) {
+        position: relative !important;
+        float: left;
+        border: 1px #000 solid;
+        width: 100%;
+    }
+    h3 {
+        font-size: 120%;
+    }
+    .badge-img {
+        float: right;
+        margin: 8px;
+        display: inline;
+    }
+}
+
+.badge-img {
+    @include border-radius(50%);
+}
+
+#footer {
+    border-top: 1px #ccc solid;
+    padding-top: 2em;
+    .footerlinks {
+        float: left;
+        li {
+            float: left;
+            color: #000;
+            padding-right: 2em;
+            a {
+                color: #000;
+                font-size: 1.3em;
+                text-decoration: none;
+            }
+        }
+    }
 }
