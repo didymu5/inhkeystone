@@ -11,6 +11,37 @@
  * @license MIT
  * @version 1.6.3
  */
+button, .button {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: #555;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box; }
+  button .button-primary, .button .button-primary {
+    color: #FFF;
+    background-color: #33C3F0;
+    border-color: #33C3F0; }
+    button .button-primary:hover, .button .button-primary:hover {
+      color: #FFF;
+      background-color: #1EAEDB;
+      border-color: #1EAEDB; }
+  button:hover, .button:hover {
+    color: #333;
+    border-color: #888;
+    outline: 0; }
+
 /* RESET & BASICS (Inspired by E. Meyers)
  * ------------------------------------------------ */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -211,59 +242,6 @@ img.scale-with-grid {
 
 /* BUTTONS
  * ------------------------------------------------ */
-.button, button, input[type="submit"], input[type="reset"], input[type="button"] {
-  background: #eeeeee -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.2)), color-stop(100%, rgba(0, 0, 0, 0.2)));
-  background: #eeeeee -webkit-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
-  background: #eeeeee -moz-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
-  background: #eeeeee -o-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
-  background: #eeeeee linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
-  border: 1px solid #aaa;
-  border-top: 1px solid #ccc;
-  border-left: 1px solid #ccc;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-  color: #444;
-  display: inline-block;
-  font-size: 15px;
-  font-weight: bold;
-  font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
-  text-decoration: none;
-  text-shadow: 0 1px rgba(255, 255, 255, 0.75);
-  cursor: pointer;
-  line-height: normal;
-  padding: 8px 10px; }
-  .button:hover, button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover {
-    color: #222;
-    background: #dddddd -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.3)), color-stop(100%, rgba(0, 0, 0, 0.3)));
-    background: #dddddd -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
-    background: #dddddd -moz-linear-gradient(top, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
-    background: #dddddd -o-linear-gradient(top, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
-    background: #dddddd linear-gradient(top, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
-    border: 1px solid #888;
-    border-top-color: #aaa;
-    border-left-color: #aaa; }
-  .button:active, button:active, input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:active {
-    border: 1px solid #666;
-    background: #cccccc -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.35)), color-stop(100%, rgba(10, 10, 10, 0.4)));
-    background: #cccccc -webkit-linear-gradient(top, rgba(255, 255, 255, 0.35) 0%, rgba(10, 10, 10, 0.4) 100%);
-    background: #cccccc -moz-linear-gradient(top, rgba(255, 255, 255, 0.35) 0%, rgba(10, 10, 10, 0.4) 100%);
-    background: #cccccc -o-linear-gradient(top, rgba(255, 255, 255, 0.35) 0%, rgba(10, 10, 10, 0.4) 100%);
-    background: #cccccc linear-gradient(top, rgba(255, 255, 255, 0.35) 0%, rgba(10, 10, 10, 0.4) 100%); }
-  .button.full-width, .button#issue-banner, button.full-width, button#issue-banner, input[type="submit"].full-width, input[type="submit"]#issue-banner, input[type="reset"].full-width, input[type="reset"]#issue-banner, input[type="button"].full-width, input[type="button"]#issue-banner {
-    width: 100%;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    text-align: center; }
-  .button.smaller, button.smaller, input[type="submit"].smaller, input[type="reset"].smaller, input[type="button"].smaller {
-    font-size: 14px;
-    padding: 4px 5px; }
-  .button.larger, button.larger, input[type="submit"].larger, input[type="reset"].larger, input[type="button"].larger {
-    font-size: 18px;
-    padding: 10px 18px; }
-
 /* Fix for odd Mozilla border & padding issues */
 button::-moz-focus-inner, input::-moz-focus-inner {
   border: 0;
@@ -691,13 +669,18 @@ header.global {
   height: auto;
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 2px #00a0e4 solid;
   min-height: 300px; }
   .article-card h3 {
-    font-size: 150%;
-    line-height: 1em; }
+    font-size: 120%;
+    line-height: 1em;
+    font-weight: bold;
+    margin-top: 10px; }
     .article-card h3 a {
       text-decoration: none; }
+    .article-card h3 span {
+      font-size: 80%;
+      font-weight: normal;
+      font-style: italic; }
   .article-card .article-img {
     width: 100%; }
 
