@@ -350,7 +350,7 @@ label span, legend span {
   float: left; }
 
 /* Clear a float */
-.u-cf, header.global .inh-logo-main, header.global .navbar .navbar-list, header.global .navbar-spacer .navbar-list, #issue-banner {
+.u-cf, header.global .inh-logo-main, header.global .navbar .navbar-list, header.global .navbar-spacer .navbar-list, #issue-banner, #issue-banner .issue-banner-title {
   content: "";
   display: table;
   clear: both; }
@@ -626,21 +626,53 @@ header.global {
 
 #issue-banner {
   position: relative;
-  display: block;
   background: #ccc;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   text-align: center;
-  min-height: 150px;
+  min-height: 350px;
   margin-bottom: 2.5rem;
   /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */ }
+  #issue-banner.dark {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase; }
+    #issue-banner.dark h2 {
+      color: #fff;
+      text-transform: none; }
+    #issue-banner.dark .issue-banner-title {
+      background-color: rgba(0, 0, 0, 0.8); }
+  #issue-banner.light {
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase; }
+    #issue-banner.light h2 {
+      color: #000;
+      text-transform: none; }
+    #issue-banner.light .issue-banner-title {
+      background-color: #000; }
+  #issue-banner .issue-banner-title {
+    margin-top: 116.66667px;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: auto;
+    height: auto;
+    background: #fff; }
+    #issue-banner .issue-banner-title .issue-number-date {
+      clear: both;
+      width: 100%;
+      display: block;
+      margin-bottom: 10px; }
+    #issue-banner .issue-banner-title #sillywrp {
+      padding: 1.5rem 6rem; }
   #issue-banner h2 {
-    margin-top: 60px; }
-  @media only screen and (max-width: 479px) {
-    #issue-banner {
-      min-height: 300px; } }
+    font-size: 4rem;
+    line-height: 1em;
+    display: block; }
 
 .img-responsive {
   display: block;

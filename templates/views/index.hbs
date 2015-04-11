@@ -1,6 +1,14 @@
 {{!< default}}
-<div id="issue-banner" class="full-width" style="background-image: url({{data.issue.coverImage.secure_url}});">
-	<div class="row"><h2>{{data.issue.name}}</h2></div>
+<div id="issue-banner" class="full-width {{data.issue.theme}}" style="background-image: url({{data.issue.coverImage.secure_url}});">
+	
+
+	<div class="issue-banner-title">
+		<div id="sillywrp">
+				<span class="issue-number-date">Issue #{{data.issue.issueNumber}} | {{date data.issue.publishedDate format='MMM YYYY'}}</span>
+				<h2>{{data.issue.name}}</h2>
+		</div>
+
+	</div>
 </div>
 <div class="container">
 	<!-- http://inheritancemag.com/assets/inheritance-solo.png -->
