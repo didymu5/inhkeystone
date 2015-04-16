@@ -40,7 +40,7 @@ Issue.add({
 		}
 	},
 	coverImage: {
-		type: Types.CloudinaryImage
+		type: Types.Url
 	},
 	theme:{
 		type: Types.Select,

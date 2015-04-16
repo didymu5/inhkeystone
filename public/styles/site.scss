@@ -169,6 +169,7 @@ header.global {
 	    	background-color: #000;
 	    }
     }
+
     .issue-banner-title{
     	@extend .u-cf;
     	
@@ -198,9 +199,7 @@ header.global {
 
     /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
     @media only screen and (max-width: $mobilePortraitWidth) {
-        .issue-banner-title{
-
-        }
+       
     }
 }
 
@@ -211,8 +210,7 @@ header.global {
 }
 
 .lead-cover-text {
-    @extend .columns;
-    @extend .six;
+	@extend .article-card;
     font-size: 150%;
     line-height: 1.5rem;
     border-top: 3px #000 solid;
@@ -232,9 +230,12 @@ header.global {
     @extend .five;
     // border:1px #ccc solid;
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     padding-bottom: 20px;
-    min-height: 300px;
+    
+    max-height:370px;
+    overflow: hidden;
+
     h3 {
         font-size: 120%;
         // border-top:2px $inhBlue solid;

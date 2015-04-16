@@ -81,6 +81,12 @@ module.exports = function() {
 		}
 		return date;
 	};
+
+	//Within the context of post get the category name ie. facets
+	_helpers.getCatName = function(categories, options) {
+		var filterCatName = _.isString(options.hash.name) ? options.hash.name : '';
+		return _.pluck(categories, 'name');
+	};
 	
 	// ### Category Helper
 	// Ghost uses Tags and Keystone uses Categories

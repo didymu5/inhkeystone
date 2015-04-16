@@ -17,7 +17,7 @@ Post.add({
 	author: { type: Types.Relationship, ref: 'Author', index: true, many:true },
 	creative: {type: Types.Relationship, ref: 'Author', index: true, many:true},
 	publishedDate: { type: Types.Date, index: true, dependsOn: { state: 'published' } },
-	image: { type: Types.CloudinaryImage, select: true},
+	image: { type: Types.Url, select: true},
 	content: {
 		brief: { type: Types.Markdown, toolbarOptions: {  }, height: 150 },
 		extended: { type: Types.Markdown, toolbarOptions: {  }, height: 400 }
