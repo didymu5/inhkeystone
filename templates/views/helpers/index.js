@@ -84,9 +84,24 @@ module.exports = function() {
 
 	//Within the context of post get the category name ie. facets
 	_helpers.getCatName = function(categories, options) {
-		var filterCatName = _.isString(options.hash.name) ? options.hash.name : '';
-		return _.pluck(categories, 'name');
+		var filterCatName = _.isString(options.hash.name) ? options.hash.name : '',
+			htmlWrap = _.isString(options.hash.htmlwrap) ? options.hash.htmlwrap : 'li';
+ 		var htmlString = '';
+		if(categories.length){
+			_.each(categories, function(cat){
+				htmlString +='<'+htmlWrap+'>'+cat.name+'</'+htmlWrap+'>'
+			});
+		}
+		return new hbs.SafeString(htmlString);
 	};
+	_helpers.hasCat = function(post, options){
+		if (typeof(post) != 'undefined' && post.categories.length != 0) {
+			return true;
+		} else{
+			return false;
+		};
+	};
+
 	
 	// ### Category Helper
 	// Ghost uses Tags and Keystone uses Categories

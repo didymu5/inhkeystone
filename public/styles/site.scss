@@ -199,7 +199,7 @@ header.global {
 
     /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
     @media only screen and (max-width: $mobilePortraitWidth) {
-       
+
     }
 }
 
@@ -254,6 +254,15 @@ header.global {
     .article-img {
         width: 100%;
     }
+    .article-categories{
+    	position: relative;
+    	margin-top: -5px;
+    	span{
+    		background-color: $inhBlue;
+    		border-radius: 5px;
+    		color:#fff;
+    	}
+    }
 }
 
 //article page
@@ -295,6 +304,8 @@ header.global {
     }
     @media only screen and (max-width: $tabletWidth) {}
 }
+
+.
 
 .article-info {
     @extend .columns;
