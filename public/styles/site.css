@@ -684,6 +684,16 @@ header.global {
       font-style: italic; }
   .article-card .article-img, .lead-cover-text .article-img {
     width: 100%; }
+  .article-card .article-categories, .lead-cover-text .article-categories {
+    position: relative;
+    margin-bottom: -30px; }
+    .article-card .article-categories span, .lead-cover-text .article-categories span {
+      line-height: 1em;
+      background-color: #00a0e4;
+      color: #fff;
+      padding: 0 2px;
+      font-weight: bold;
+      text-transform: uppercase; }
 
 .article-parent h1 {
   line-height: 1em; }

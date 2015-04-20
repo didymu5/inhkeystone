@@ -23,14 +23,12 @@
 		{{#each data.posts}} 
 			
 		<div class="article-card">
-			
-			{{#if this.image }}<img src="{{this.image}}" class="article-img">{{/if}}
 			{{#if this.categories}}
 			<div class="article-categories">{{getCatName this.categories htmlwrap="span"}}</div>
 			{{/if}}
-			<h3><a href="/issues/{{this.issue.issueNumber}}/{{this.slug}}">{{this.title}}</a> <span>by {{#each this.author}}{{this.name.first}} {{this.name.last}}{{/each}}</span></h3>
-
+			{{#if this.image }}<img src="{{this.image}}" class="article-img">{{/if}}
 			
+			<h3><a href="/issues/{{this.issue.issueNumber}}/{{this.slug}}">{{this.title}}</a> <span>by {{#each this.author}}{{this.name.first}} {{this.name.last}}{{/each}}</span></h3>
 
 			<div class="article-brief">
 				{{{this.content.brief.html}}}

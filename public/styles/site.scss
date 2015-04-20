@@ -256,11 +256,14 @@ header.global {
     }
     .article-categories{
     	position: relative;
-    	margin-top: -5px;
+    	margin-bottom: -30px;
     	span{
+    		line-height: 1em;
     		background-color: $inhBlue;
-    		border-radius: 5px;
     		color:#fff;
+    		padding:0 2px;
+    		font-weight: bold;
+    		text-transform: uppercase;
     	}
     }
 }
@@ -305,7 +308,7 @@ header.global {
     @media only screen and (max-width: $tabletWidth) {}
 }
 
-.
+
 
 .article-info {
     @extend .columns;
