@@ -11,7 +11,7 @@ var Author = new keystone.List('Author');
 Author.add({
 	name: { type: Types.Name, required: true, index: true },
 	email: { type: Types.Email, initial: true, required: false, index: true },
-	image: { type: Types.url},
+	image: { type: Types.Url},
 	bio: { type: Types.Markdown, wysiwyg: true, height: 150 }
 });
 
