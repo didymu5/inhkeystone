@@ -2,6 +2,8 @@ keystone.js
 updates/0.0.1-admin.js
 updates
 
+
+
 # Logs
 logs
 *.log
@@ -30,6 +32,8 @@ node_modules
 
 # Ignore .env configuration files
 .env
+*.env
+
 
 # Ignore .DS_Store files on OS X
 .DS_Store

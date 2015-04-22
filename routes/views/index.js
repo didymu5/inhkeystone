@@ -13,7 +13,6 @@ exports = module.exports = function(req, res) {
 
 			// keystone.list('Issue').model.find().where('state','published')
 
-
 			keystone.list('Issue').model.findOne().where('state', 'published').exec(function(err, result) {
 
 				if (err) {
@@ -34,8 +33,6 @@ exports = module.exports = function(req, res) {
 					
 					next(err);
 				});
-
-				// next();
 			});
 			
 			
