@@ -41,6 +41,7 @@ exports = module.exports = function(app) {
 	app.get('/issues/', routes.views.issue);
 	app.get('/issues/:issueNumber', routes.views.issue);
 	app.get('/issues/:issueNumber/:post', routes.views.article);
+	app.get('/about', routes.views.about);
 	// app.get('/gallery', routes.views.gallery);
 	app.all('/contact', routes.views.contact);
 	
