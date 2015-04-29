@@ -22,7 +22,8 @@
 	
 	{{#each data.posts}}
 	<div class="post-box">
-		<h2>{{title}}</h2>
+
+		<h2><a href="/issues/{{issue.issueNumber}}/{{slug}}">{{title}}</a></h2>
 		{{#each author}} {{name.first}} {{name.last}}{{/each}}
 	</div>
 	
