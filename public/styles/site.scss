@@ -269,6 +269,14 @@ header.global {
 }
 
 //article page
+
+.isArticle{
+    #issue-banner{
+        border: 3px #ccc solid;
+        min-height: 1rem;
+    }
+}
+
 .article-parent {
     h1 {
         line-height: 1em;

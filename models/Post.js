@@ -25,7 +25,8 @@ Post.add({
 	InfoArticle: { type: Types.Markdown, toolbarOptions: {  }, height: 150 },
 	kindOf: {type: Types.Select, options:'authored, interview', default: 'authored'},
 	categories: { type: Types.Relationship, ref: 'PostCategory', many: true },
-	issue:{type: Types.Relationship, ref:'Issue', many: false}
+	issue:{type: Types.Relationship, ref:'Issue', many: false},
+	articleClass: {type: Types.Text, default:"isArticle", many: true}
 });
 
 Post.relationship({ ref: 'Post', path: 'posts' });
