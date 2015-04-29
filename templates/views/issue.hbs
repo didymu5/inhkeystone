@@ -1,26 +1,32 @@
-{{data.issue}}
 
 <hr>
 
 {{#if data.issues.length}}
+<div class="issues-list">
 	{{#each data.issues}}
-	<p>{{name}} - {{content.brief.md}} - <a href="/issues/{{issueNumber}}">Issue {{issueNumber}}</a></p>
-	{{coverImage.url}}
+
+	<div class="issue-list-each">
+
+		<p><a href="/issues/{{issueNumber}}" title="{{name}} - issue {{issueNumber}}"><img src="{{magazineImage}}" alt="{{name}}" class="magazine-image"></a></p>
+		<p><strong>{{name}}</strong> - <a href="/issues/{{issueNumber}}">Issue {{issueNumber}}</a></p>
+		
+		
+	</div>
+	
 	{{/each}}
+</div>
 {{/if}}
 
 
 {{#if data.issue}} {{!-- single issue--}}
-
-<hr>
+	
+	<hr>
 	<p>{{data.issue.name}}</p>
 	<p>Issue-{{data.issue.issueNumber}}</p>
 	<p>{{data.issue.content.brief.md}}</p>
 	{{data.issue.coverImage}}
-
-
-<hr>
-<h2>Post from issue {{data.issue.issueNumber}}</h2>
+	<hr>
+	<h2>Post from issue {{data.issue.issueNumber}}</h2>
 
 
 <ul>

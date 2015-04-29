@@ -42,6 +42,9 @@ Issue.add({
 	coverImage: {
 		type: Types.Url
 	},
+	magazineImage:{
+		type: Types.Url
+	},
 	theme:{
 		type: Types.Select,
 		options: 'dark, light',
@@ -59,10 +62,6 @@ Issue.add({
 			height: 400
 		}
 	}
-	// ,
-	// downloadUrl: {
-	// 	type: Types.S3File
-	// }
 });
 
 Issue.relationship({ ref: 'Post', path: 'issues', refPath: 'issue' });

@@ -6,41 +6,36 @@
 
 //header global
 header.global {
-
     text-align: center;
     margin-top: 10px;
     margin-bottom: 1rem;
-    #inh-tagline{
-    	color:#000;
-    	text-transform: uppercase;
-    	letter-spacing: 5px;
-    	border-top: 1px solid #000;
-    	margin-top: 25px;
-    	p{
-    		text-align: center;
-    		background: #fff;
-    		padding-left: 15px;
-    		padding-right: 15px;
-    		margin-top: -15px;
-    		margin-right: auto;
-    		margin-left: auto;
-    		width:500px;
-    		 
-    	}
-    	em{
-    		font-style: normal;
-    		font-weight: bold;
-
-    	}
+    #inh-tagline {
+        color: #000;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        border-top: 1px solid #000;
+        margin-top: 25px;
+        p {
+            text-align: center;
+            background: #fff;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-top: -15px;
+            margin-right: auto;
+            margin-left: auto;
+            width: 500px;
+        }
+        em {
+            font-style: normal;
+            font-weight: bold;
+        }
     }
     .inh-logo-main {
         @extend .u-cf;
-
         margin-right: auto;
         margin-left: auto;
         img.inh-logo {
             max-width: 30rem;
-           
         }
     }
     .navbar + .docs-section {
@@ -71,7 +66,7 @@ header.global {
                 font-size: 1.2rem;
                 font-weight: 600;
                 letter-spacing: .2rem;
-                margin:0 5rem;
+                margin: 0 5rem;
                 text-decoration: none;
                 line-height: 2.5rem;
                 color: #222;
@@ -79,28 +74,28 @@ header.global {
         }
         @media only screen and (max-width: $midSizeWidth) {
             // width: 6rem !important;
-            #inh-tagline{
-            	font-size: 14px !important;
+            #inh-tagline {
+                font-size: 14px !important;
             }
             .navbar-list {
-				.navbar-link {
-					font-size:15px;
-					margin:0 1rem;
-				}
+                .navbar-link {
+                    font-size: 15px;
+                    margin: 0 1rem;
+                }
             }
-            #inh-tagline{ 
-            	 	p{
-            	 		width:100% !important;
-            	 	}
-            	 }
+            #inh-tagline {
+                p {
+                    width: 100% !important;
+                }
+            }
         }
-         @media only screen and (max-width: $mobileLandscapeWidth){ 
-            	 #inh-tagline{ 
-            	 	p{
-            	 		max-width: 100%;
-            	 	}
-            	 }
+        @media only screen and (max-width: $mobileLandscapeWidth) {
+            #inh-tagline {
+                p {
+                    max-width: 100%;
+                }
             }
+        }
     }
     .navbar-spacer {
         display: none;
@@ -132,7 +127,6 @@ header.global {
 
 #issue-banner {
     $issue-banner-height: 350px;
-    
     @extend .full-width;
     @extend .u-cf;
     position: relative;
@@ -144,65 +138,58 @@ header.global {
     text-align: center;
     min-height: $issue-banner-height;
     margin-bottom: 2.5rem;
-
-    &.dark{
-    	color:#fff;
-    	font-weight: bold;
-    	text-transform: uppercase;
-    	h2 {
-	        color:#fff;
-	        text-transform: none;
-	    }	
-	    .issue-banner-title{
-	    	background-color: rgba(0, 0 ,0, .8);
-	    }
+    &.dark {
+        color: #fff;
+        font-weight: bold;
+        text-transform: uppercase;
+        h2 {
+            color: #fff;
+            text-transform: none;
+        }
+        .issue-banner-title {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
     }
-     &.light{
-    	color:#000;
-    	font-weight: bold;
-    	text-transform: uppercase;
-    	h2 {
-	        color:#000;
-	        text-transform: none;
-	    }	
-	    .issue-banner-title{
-	    	background-color: #000;
-	    }
+    &.light {
+        color: #000;
+        font-weight: bold;
+        text-transform: uppercase;
+        h2 {
+            color: #000;
+            text-transform: none;
+        }
+        .issue-banner-title {
+            background-color: #000;
+        }
     }
-
-    .issue-banner-title{
-    	@extend .u-cf;
-    	
-    	margin-top: $issue-banner-height / 3;
-		display: inline-block;
-    	margin-left: auto;
-    	margin-right: auto;
-    	text-align: center;
-    	width:auto;
-    	height:auto;
-    	background: #fff;
-    	.issue-number-date{
-    		clear: both;	
-    		width: 100%;
-    		display: block;
-    		margin-bottom: 10px;
-    	}
-    	#sillywrp{
-    		padding:1.5rem 6rem;
-    	}
+    .issue-banner-title {
+        @extend .u-cf;
+        margin-top: $issue-banner-height / 3;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        width: auto;
+        height: auto;
+        background: #fff;
+        .issue-number-date {
+            clear: both;
+            width: 100%;
+            display: block;
+            margin-bottom: 10px;
+        }
+        #sillywrp {
+            padding: 1.5rem 6rem;
+        }
     }
     h2 {
-    	font-size:4rem;
+        font-size: 4rem;
         line-height: 1em;
         display: block;
     }
-
     /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-    @media only screen and (max-width: $mobilePortraitWidth) {
-
-    }
+    @media only screen and (max-width: $mobilePortraitWidth) {}
 }
-
 
 .img-responsive {
     display: block;
@@ -210,7 +197,7 @@ header.global {
 }
 
 .lead-cover-text {
-	@extend .article-card;
+    @extend .article-card;
     font-size: 150%;
     line-height: 1.5rem;
     border-top: 3px #000 solid;
@@ -232,48 +219,65 @@ header.global {
     height: auto;
     margin-bottom: 30px;
     padding-bottom: 20px;
-    
-    max-height:370px;
+    max-height: 370px;
     overflow: hidden;
-
     h3 {
         font-size: 120%;
         // border-top:2px $inhBlue solid;
         line-height: 1em;
-        font-weight:bold;
+        font-weight: bold;
         margin-top: 10px;
         a {
             text-decoration: none;
         }
-        span{
-        	font-size: 80%;
-        	font-weight: normal;
-        	font-style: italic;
+        span {
+            font-size: 80%;
+            font-weight: normal;
+            font-style: italic;
         }
     }
     .article-img {
         width: 100%;
     }
-    .article-categories{
-    	position: relative;
-    	margin-bottom: -30px;
-    	span{
-    		line-height: 1em;
-    		background-color: $inhBlue;
-    		color:#fff;
-    		padding:0 2px;
-    		font-weight: bold;
-    		text-transform: uppercase;
-    	}
+    .article-categories {
+        position: relative;
+        margin-bottom: -30px;
+        span {
+            line-height: 1em;
+            background-color: $inhBlue;
+            color: #fff;
+            padding: 0 2px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
     }
 }
 
 //article page
 
-.isArticle{
-    #issue-banner{
-        border: 3px #ccc solid;
-        min-height: 1rem;
+.isArticle {
+    #issue-banner {
+        min-height: 80px;
+        .issue-banner-title {
+            float: left;
+            margin-top: 20px;
+            &:hover {
+                opacity: .7;
+            }
+            padding: 0;
+            #sillywrp {
+                margin-top: 0;
+                padding: 10px 13px 0px;
+            }
+            h2 {
+                font-size: 1.5em;
+                font-style: italic;
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+        }
     }
 }
 
@@ -316,8 +320,6 @@ header.global {
     @media only screen and (max-width: $tabletWidth) {}
 }
 
-
-
 .article-info {
     @extend .columns;
     @extend .five;
@@ -348,6 +350,29 @@ header.global {
 
 .badge-img {
     @include border-radius(50%);
+}
+
+//Issues page
+.issues-list {
+    @extend .container;
+    @extend .columns;
+    @extend .twelve;
+
+    .magazine-image {
+        width: 200px;
+    }
+    .issue-list-each{
+        text-align: center;
+        max-width: 250px;
+        float: left;
+        border: 1px #eee solid;
+        margin-right: .5em;
+        margin-left: .5em;
+        margin-bottom: 3em;
+        &:last-child{
+
+        }
+    }
 }
 
 #footer {
