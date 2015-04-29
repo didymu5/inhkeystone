@@ -1,42 +1,31 @@
-
-<hr>
-
 {{#if data.issues.length}}
 <div class="issues-list">
 	{{#each data.issues}}
-
 	<div class="issue-list-each">
-
 		<p><a href="/issues/{{issueNumber}}" title="{{name}} - issue {{issueNumber}}"><img src="{{magazineImage}}" alt="{{name}}" class="magazine-image"></a></p>
 		<p><strong>{{name}}</strong> - <a href="/issues/{{issueNumber}}">Issue {{issueNumber}}</a></p>
 		
 		
 	</div>
+	{{/each}}
+</div>
+{{/if}}
+{{#if data.issue}} {{!-- single issue--}}
+<div class="issue-single">
+	<div id="issue-banner" class="full-width {{data.issue.theme}}" style="background-image: url({{data.issue.coverImage}});">
+		<div class="issue-banner-title">
+			<div id="sillywrp">
+				<h2><a href="/issues/{{data.issue.issueNumber}}">&lt; {{data.issue.name}}</a></h2>
+			</div>
+		</div>
+	</div>
+	
+	{{#each data.posts}}
+	<div class="post-box">
+		<h2>{{title}}</h2>
+		{{#each author}} {{name.first}} {{name.last}}{{/each}}
+	</div>
 	
 	{{/each}}
 </div>
 {{/if}}
-
-
-{{#if data.issue}} {{!-- single issue--}}
-	
-	<hr>
-	<p>{{data.issue.name}}</p>
-	<p>Issue-{{data.issue.issueNumber}}</p>
-	<p>{{data.issue.content.brief.md}}</p>
-	{{data.issue.coverImage}}
-	<hr>
-	<h2>Post from issue {{data.issue.issueNumber}}</h2>
-
-
-<ul>
-	{{#each data.posts}}
-	{{this}}
-	<li>{{title}} - {{#each author}} {{name.first}} {{name.last}} - {{bio.md}} {{/each}} 
-		<img src="{{image.url}}" width="300"/> {{image}}
-	</li>
-	{{/each}}
-</ul>
-{{/if}}
-
-
