@@ -6,48 +6,44 @@
 
 	</div>
 </div>
-<div class="container">
-	<div class="row">
-		<article class="article-parent">
-			<hr>
-			<header>
-				<h1>{{data.post.title}}</h1>
-				<h2>{{data.post.subTitle}}</h2>
-				<h5>
-				{{!-- {{{categoryList data.post.categories prefix="Posted in "}}} --}}
-				{{!-- {{#if author.name.first}}by {{author.name.first}}{{/if}} --}}
-				{{data.post.byLine}}
-				</h5>
-			</header>
-			<div class="article-section post">
-				{{{data.post.content.extended.html}}}
-			</div>
-			<div class="article-info">
-				<div class="author-info">
-					{{#each data.post.author}}
-					{{#if @index}}
-						{{else}}
-						<img src="{{this.image.secure_url}}" class="badge-img">
-					{{/if}}
-					<h3>
-					by
-					
-					{{#if @index}}
-					{{this.name.first}} {{this.name.last}} and
-					{{else}}
-					{{this.name.first}} {{this.name.last}}
-					{{/if}}
-					
-					</h3>
-					{{{this.bio.html}}}
-					{{/each}}
-				</div>
-				<hr>
-				<div class="more-info">
-					{{{data.post.InfoArticle.html}}}
-				</div>
-			</div>
-		</article>
-		
+<div class="wrapper-article">
+<article class="article-parent">
+	<header>
+		<h1>{{data.post.title}}</h1>
+		<h2>{{data.post.subTitle}}</h2>
+		<h5>
+		{{!-- {{{categoryList data.post.categories prefix="Posted in "}}} --}}
+		{{!-- {{#if author.name.first}}by {{author.name.first}}{{/if}} --}}
+		{{data.post.byLine}}
+		</h5>
+	</header>
+	<div class="article-section post">
+		{{{data.post.content.extended.html}}}
 	</div>
+	<div class="article-info">
+		<div class="author-info">
+			{{#each data.post.author}}
+			{{#if @index}}
+				{{else}}
+				<img src="{{this.image.secure_url}}" class="badge-img">
+			{{/if}}
+			<h3>
+			by
+			
+			{{#if @index}}
+			{{this.name.first}} {{this.name.last}} and
+			{{else}}
+			{{this.name.first}} {{this.name.last}}
+			{{/if}}
+			
+			</h3>
+			{{{this.bio.html}}}
+			{{/each}}
+		</div>
+		<hr>
+		<div class="more-info">
+			{{{data.post.InfoArticle.html}}}
+		</div>
+	</div>
+</article>
 </div>

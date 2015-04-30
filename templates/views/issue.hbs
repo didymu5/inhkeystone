@@ -3,9 +3,8 @@
 	{{#each data.issues}}
 	<div class="issue-list-each">
 		<p><a href="/issues/{{issueNumber}}" title="{{name}} - issue {{issueNumber}}"><img src="{{magazineImage}}" alt="{{name}}" class="magazine-image"></a></p>
-		<p><strong>{{name}}</strong> - <a href="/issues/{{issueNumber}}">Issue {{issueNumber}}</a></p>
-		
-		
+		<p>
+			<strong>{{name}}</strong> - <a href="/issues/{{issueNumber}}">Issue {{issueNumber}}</a></p>
 	</div>
 	{{/each}}
 </div>
@@ -24,7 +23,7 @@
 	<div class="post-box">
 
 		<h2><a href="/issues/{{issue.issueNumber}}/{{slug}}">{{title}}</a></h2>
-		{{#each author}} {{name.first}} {{name.last}}{{/each}}
+		{{byLine}}
 	</div>
 	
 	{{/each}}
