@@ -685,8 +685,7 @@ header.global {
   .article-card .article-img, .lead-cover-text .article-img {
     width: 100%; }
   .article-card .article-categories, .lead-cover-text .article-categories {
-    position: relative;
-    margin-bottom: -30px; }
+    position: relative; }
     .article-card .article-categories span, .lead-cover-text .article-categories span {
       line-height: 1em;
       background-color: #00a0e4;

@@ -14,22 +14,17 @@
 	<!-- http://inheritancemag.com/assets/inheritance-solo.png -->
 	<div class="row">
 		
-		<div class="lead-cover-text">
-			
-			<div class="lead">{{{data.issue.content.brief.html}}}</div>
-		</div>
-		
-		
 		{{#each data.posts}} 
 			
 		<div class="article-card">
-			{{#if this.categories}}
-			<div class="article-categories">{{getCatName this.categories htmlwrap="span"}}</div>
-			{{/if}}
-			{{#if this.image }}<img src="{{this.image}}" class="article-img">{{/if}}
 			
-			<h3><a href="/issues/{{this.issue.issueNumber}}/{{this.slug}}">{{this.title}}</a> <span>by {{#each this.author}}{{this.name.first}} {{this.name.last}}{{/each}}</span></h3>
-
+			{{#if this.image }}<a href="/issues/{{this.issue.issueNumber}}/{{this.slug}}"><img src="{{this.image}}" class="article-img"></a>{{/if}}
+			{{#if this.categories}}
+				<div class="article-categories">{{getCatName this.categories htmlwrap="span"}}</div>
+			{{/if}}
+			<h3><a href="/issues/{{this.issue.issueNumber}}/{{this.slug}}">{{this.title}}</a> <span> <br>
+				{{this.byLine}} </span></h3>
+				
 			<div class="article-brief">
 				{{{this.content.brief.html}}}
 			</div>

@@ -15,7 +15,7 @@ Post.add({
 	title: { type: String, required: true },
 	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
 	author: { type: Types.Relationship, ref: 'Author', index: true, many:true },
-	creative: {type: Types.Relationship, ref: 'Author', index: true, many:true},
+	byLine: {type: Types.Text},
 	publishedDate: { type: Types.Date, index: true, dependsOn: { state: 'published' } },
 	image: { type: Types.Url, select: true},
 	content: {
