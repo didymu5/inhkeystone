@@ -13,6 +13,7 @@ var Post = new keystone.List('Post', {
 
 Post.add({
 	title: { type: String, required: true },
+	subTitle: { type: String},
 	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
 	author: { type: Types.Relationship, ref: 'Author', index: true, many:true },
 	byLine: {type: Types.Text},
