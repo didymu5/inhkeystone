@@ -328,7 +328,7 @@ label span, legend span {
   float: left; }
 
 /* Clear a float */
-.u-cf, header.global .inh-logo-main, header.global .navbar .navbar-list, header.global .navbar-spacer .navbar-list, #issue-banner, #issue-banner .issue-banner-title, .issue-single .post-box {
+.u-cf, header.global .inh-logo-main, header.global .navbar .navbar-list, header.global .navbar-spacer .navbar-list, #issue-banner, #issue-banner .issue-banner-title, .article-parent .article-section p, .article-parent .article-section blockquote, .issue-single .post-box {
   content: "";
   display: table;
   clear: both; }
@@ -742,41 +742,48 @@ header.global {
     font-size: 1em;
     font-weight: bold; }
 .article-parent .article-section p {
-  font-family: "Mercury SSm A', 'Mercury SSm B", serif;
-  float: none !important;
   margin-right: auto !important;
   margin-left: auto !important;
   max-width: 40rem;
-  clear: both; }
+  font-family: "Mercury SSm A', 'Mercury SSm B", serif; }
   .article-parent .article-section p img {
     max-width: 100%; }
   @media only screen and (max-width: 1020px) {
     .article-parent .article-section p {
+      margin-right: auto !important;
+      margin-left: auto !important;
       max-width: 30rem;
       padding-right: 10px;
       padding-left: 10px; } }
   @media only screen and (max-width: 420px) {
     .article-parent .article-section p {
+      margin-right: auto !important;
+      margin-left: auto !important;
       max-width: 90%; } }
   .article-parent .article-section p strong:first-child {
     text-transform: uppercase;
     font-family: "Mercury SSm A', 'Mercury SSm B", sans-serif; }
-  .article-parent .article-section p em:first-child {
+  .article-parent .article-section p .intro-begin {
     text-transform: uppercase;
     font-family: "Mercury SSm A', 'Mercury SSm B", sans-serif;
     font-style: normal; }
+.article-parent .article-section h3 {
+  font-family: "Mercury SSm A', 'Mercury SSm B", sans-serif;
+  text-align: center;
+  font-size: 1.2em;
+  text-transform: uppercase; }
 .article-parent .article-section .breakout-img {
   margin-top: 2rem;
   margin-bottom: 2rem; }
   .article-parent .article-section .breakout-img img {
     max-width: 100%; }
-.article-parent .article-section .breakout-quote, .article-parent .article-section .breakout-quotes {
-  max-width: 100%;
-  text-align: center; }
 .article-parent .article-section blockquote {
-  width: 100%;
-  padding: 0; }
-  .article-parent .article-section blockquote p em {
+  border-left: none;
+  text-align: center;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  max-width: 80%; }
+  .article-parent .article-section blockquote p {
     width: 100%;
     max-width: 100%; }
 

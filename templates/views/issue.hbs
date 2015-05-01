@@ -1,48 +1,54 @@
-{{#if data.issues.length}}
-<div class="issues-list">
-	{{#each data.issues}}
-	<div class="issue-list-each">
-		<p><a href="/issues/{{issueNumber}}" title="{{name}} - issue {{issueNumber}}"><img src="{{magazineImage}}" alt="{{name}}" class="magazine-image"></a></p>
-		<p>
-			<strong>{{name}}</strong> - <a href="/issues/{{issueNumber}}">Issue {{issueNumber}}</a></p>
-	</div>
-	{{/each}}
-</div>
-{{/if}}
-{{#if data.issue}} {{!-- single issue--}}
-<div class="issue-single">
-	<div id="issue-banner" class="full-width {{data.issue.theme}}" style="background-image: url({{data.issue.coverImage}});">
-		<div class="issue-banner-title">
-			<div id="sillywrp">
-				<h2><a href="/issues/{{data.issue.issueNumber}}">&lt; {{data.issue.name}}</a></h2>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		{{#if data.issues.length}}
+		<div class="issues-list">
+			{{#each data.issues}}
+			<div class="issue-list-each">
+				<p>
+					<a href="/issues/{{issueNumber}}" title="{{name}} - issue {{issueNumber}}"><img src="{{magazineImage}}" alt="{{name}}" class="magazine-image"></a>
+				</p>
+				<p>
+					<strong>{{name}}</strong> - <a href="/issues/{{issueNumber}}">Issue {{issueNumber}}</a>
+				</p>
+			</div>{{/each}}
+		</div>{{/if}} 
+		{{#if data.issue}} {{!-- single issue--}}
+		<div class="issue-single">
+			<div id="issue-banner" class="full-width {{data.issue.theme}}" style="background-image: url({{data.issue.coverImage}});">
+				<div class="issue-banner-title">
+					<div id="sillywrp">
+						<h2>
+							<a href="/issues/{{data.issue.issueNumber}}">&lt; {{data.issue.name}}</a>
+						</h2>
+					</div>
+				</div>
+			</div>{{!-- {{#each data.posts}}
+			<div class="post-box">
+				<h2>
+					<a href="/issues/{{issue.issueNumber}}/{{slug}}">{{title}}</a>
+				</h2>{{byLine}}
+			</div>{{/each}} --}}
+			<div class="container">
+				<div class="row">
+					{{#each data.posts}}
+					<div class="article-card">
+						{{#if this.image }}<a href="/issues/{{this.issue.issueNumber}}/{{this.slug}}"><img src="{{this.image}}" class="article-img"></a>{{/if}} {{#if this.categories}}
+						<div class="article-categories">
+							{{getCatName this.categories htmlwrap="span"}}
+						</div>{{/if}}
+						<h3>
+							<a href="/issues/{{this.issue.issueNumber}}/{{this.slug}}">{{this.title}}</a> <span><br>
+							{{this.byLine}}</span>
+						</h3>
+						<div class="article-brief">
+							{{{this.content.brief.html}}}
+						</div>
+					</div>{{/each}}
+				</div>
 			</div>
-		</div>
-	</div>
-{{!-- {{#each data.posts}}
-<div class="post-box">
-	<h2><a href="/issues/{{issue.issueNumber}}/{{slug}}">{{title}}</a></h2>
-	{{byLine}}
-</div>
-
-{{/each}} --}}
-
-			{{#each data.posts}} 
-			
-		<div class="article-card">
-			
-			{{#if this.image }}<a href="/issues/{{this.issue.issueNumber}}/{{this.slug}}"><img src="{{this.image}}" class="article-img"></a>{{/if}}
-			{{#if this.categories}}
-				<div class="article-categories">{{getCatName this.categories htmlwrap="span"}}</div>
-			{{/if}}
-			<h3><a href="/issues/{{this.issue.issueNumber}}/{{this.slug}}">{{this.title}}</a> <span> <br>
-				{{this.byLine}} </span></h3>
-				
-			<div class="article-brief">
-				{{{this.content.brief.html}}}
-			</div>
-		
-		</div>
-
-		{{/each}}
-</div>
-{{/if}}
+		</div>{{/if}}
+	</body>
+</html>

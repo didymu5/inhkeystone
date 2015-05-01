@@ -318,43 +318,48 @@ header.global {
         }
     }
     //create a mixin to adjust layout
+
+    @mixin readingColumn($setWidth){
+
+        @extend .u-cf;
+            margin-right: auto !important;
+            margin-left: auto !important;
+            max-width: $setWidth;
+    }
     .article-section {
         @extend .columns;
         @extend .ten;
         p {
+            @include readingColumn(40rem);
+
             font-family: $readingFamily;
-            float: none !important;
-            margin-right: auto !important;
-            margin-left: auto !important;
-            // padding-left:20%;
-            // padding-right:20%;
-            max-width: 40rem;
-            clear: both;
+            
             img {
                 max-width: 100%;
             }
             @media only screen and (max-width: $midSizeWidth) {
-                max-width: 30rem;
+                @include readingColumn(30rem);
                 padding-right: 10px;
                 padding-left: 10px;
             }
             @media only screen and (max-width: $mobileLandscapeWidth) {
-                max-width: 90%;
+                @include readingColumn(90%);
             }
             strong:first-child {
                 text-transform: uppercase;
                 font-family: $fontFamily;
             }
-            &:first-child {
-                em:first-child {
-                    text-transform: uppercase;
-                    font-family: $fontFamily;
-                    font-style: normal;
-                }
+            .intro-begin {
+                text-transform: uppercase;
+                font-family: $fontFamily;
+                font-style: normal;
             }
         }
         h3 {
-            font-family: $font-family;
+            font-family: $fontFamily;
+            text-align: center;
+            font-size: 1.2em;
+            text-transform: uppercase;
         }
         .breakout-img {
             margin-top: 2rem;
@@ -364,8 +369,9 @@ header.global {
             }
         }
         blockquote {
-            width: 100%;
-            padding: 0;
+            border-left: none;
+            text-align: center;
+            @include readingColumn(80%);
             p {
                 width: 100%;
                 max-width: 100%;
