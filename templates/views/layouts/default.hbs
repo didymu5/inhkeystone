@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>Inheritance Magazine</title>
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-		
+
 		<link href="/styles/site.css" rel="stylesheet">
 		
 		<meta property="og:title" content="Page_Title" >
@@ -27,6 +27,17 @@
 		<meta name="twitter:description" content="Page description less than 200 characters">
 		<meta name="twitter:creator" content="@author_handle">
 		<meta name="twitter:image" content="http://www.example.com/image.jpg">
+
+		<script async="true">
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'dddd-UA-18410506-1', 'auto');
+		ga('send', 'pageview');
+
+		</script>
 
 		{{!-- This file provides the default styling for the KeystoneJS Content Editor
 		- only renders when user is logged in and admin--}}
@@ -101,5 +112,7 @@
 		--}}
 		<script src="/js/lib/bootstrap/bootstrap-3.2.0.min.js"></script>
 		{{{isAdminEditorJS user}}}
+
+
 	</body>
 </html>

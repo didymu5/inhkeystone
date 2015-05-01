@@ -293,7 +293,6 @@ header.global {
         max-width: 80%;
         text-align: center;
         margin-bottom: 2em;
-
         h1 {
             font-size: 3em;
             font-style: italic;
@@ -303,69 +302,74 @@ header.global {
                 margin-bottom: .5em;
             }
         }
-        h2{
+        h2 {
             font-style: italic;
             line-height: 1em;
-            font-size: 2em; 
+            font-size: 2em;
+            @media only screen and (max-width: $tabletWidth) {
+                font-size: 150%;
+                margin-bottom: .5em;
+            }
         }
-        h5{
+        h5 {
             font-family: $fontFamily;
             font-size: 1em;
             font-weight: bold;
         }
     }
-
     //create a mixin to adjust layout
     .article-section {
-    @extend .columns;
-    @extend .ten;
-    p {
-        font-family: $readingFamily;
-        max-width: 100%;
-        float: none !important;
-        margin-right: auto !important;
-        margin-left: auto !important;
-        // padding-left:20%;
-        // padding-right:20%;
-        max-width: 40rem;
-        clear: both;
-        img {
+        @extend .columns;
+        @extend .ten;
+        p {
+            font-family: $readingFamily;
+            float: none !important;
+            margin-right: auto !important;
+            margin-left: auto !important;
+            // padding-left:20%;
+            // padding-right:20%;
+            max-width: 40rem;
+            clear: both;
+            img {
+                max-width: 100%;
+            }
+            @media only screen and (max-width: $midSizeWidth) {
+                max-width: 30rem;
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+            @media only screen and (max-width: $mobileLandscapeWidth) {
+                max-width: 90%;
+            }
+            strong:first-child {
+                text-transform: uppercase;
+                font-family: $fontFamily;
+            }
+        }
+        .breakout-img {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            img {
+                max-width: 100%;
+            }
+        }
+        .breakout-quote, .breakout-quotes {
             max-width: 100%;
+            text-align: center;
+            
         }
-        @media only screen and (max-width: $midSizeWidth) {
-             max-width: 30rem;
-             padding-right: 10px;
-             padding-left: 10px;
-        }
-        @media only screen and (max-width: $mobileLandscapeWidth) {
-             max-width: 90%;
-        }
-    }
-    .breakout-img{
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-        img{
-            max-width:100%;
-        }
-    }
-    .breakout-quote{
-        max-width: 100%;
-        text-align: center;
         blockquote {
-            width: 150%;
-        }
-    }
-    blockquote {
-        width: 150%;
-    }
-    @media only screen and (max-width: $midSizeWidth) {
-       
-    }
-    @media only screen and (max-width: $tabletWidth) {}
+                width: 100%;
+                padding: 0;
+                p em{
+                    width: 100%;
+                    max-width: 100%;
+                }
+            }
+        @media only screen and (max-width: $midSizeWidth) {}
+        @media only screen and (max-width: $tabletWidth) {}
     }
 }
-
-
 
 .article-info {
     @extend .columns;

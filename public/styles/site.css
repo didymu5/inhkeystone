@@ -733,13 +733,16 @@ header.global {
     font-style: italic;
     line-height: 1em;
     font-size: 2em; }
+    @media only screen and (max-width: 768px) {
+      .article-parent header h2 {
+        font-size: 150%;
+        margin-bottom: .5em; } }
   .article-parent header h5 {
     font-family: "Mercury SSm A', 'Mercury SSm B", sans-serif;
     font-size: 1em;
     font-weight: bold; }
 .article-parent .article-section p {
   font-family: "Mercury SSm A', 'Mercury SSm B", serif;
-  max-width: 100%;
   float: none !important;
   margin-right: auto !important;
   margin-left: auto !important;
@@ -755,18 +758,23 @@ header.global {
   @media only screen and (max-width: 420px) {
     .article-parent .article-section p {
       max-width: 90%; } }
+  .article-parent .article-section p strong:first-child {
+    text-transform: uppercase;
+    font-family: "Mercury SSm A', 'Mercury SSm B", sans-serif; }
 .article-parent .article-section .breakout-img {
   margin-top: 2rem;
   margin-bottom: 2rem; }
   .article-parent .article-section .breakout-img img {
     max-width: 100%; }
-.article-parent .article-section .breakout-quote {
+.article-parent .article-section .breakout-quote, .article-parent .article-section .breakout-quotes {
   max-width: 100%;
   text-align: center; }
-  .article-parent .article-section .breakout-quote blockquote {
-    width: 150%; }
 .article-parent .article-section blockquote {
-  width: 150%; }
+  width: 100%;
+  padding: 0; }
+  .article-parent .article-section blockquote p em {
+    width: 100%;
+    max-width: 100%; }
 
 .article-info {
   float: right !important;
