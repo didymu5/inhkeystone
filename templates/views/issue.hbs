@@ -18,14 +18,31 @@
 			</div>
 		</div>
 	</div>
-	
-	{{#each data.posts}}
-	<div class="post-box">
+{{!-- {{#each data.posts}}
+<div class="post-box">
+	<h2><a href="/issues/{{issue.issueNumber}}/{{slug}}">{{title}}</a></h2>
+	{{byLine}}
+</div>
 
-		<h2><a href="/issues/{{issue.issueNumber}}/{{slug}}">{{title}}</a></h2>
-		{{byLine}}
-	</div>
-	
-	{{/each}}
+{{/each}} --}}
+
+			{{#each data.posts}} 
+			
+		<div class="article-card">
+			
+			{{#if this.image }}<a href="/issues/{{this.issue.issueNumber}}/{{this.slug}}"><img src="{{this.image}}" class="article-img"></a>{{/if}}
+			{{#if this.categories}}
+				<div class="article-categories">{{getCatName this.categories htmlwrap="span"}}</div>
+			{{/if}}
+			<h3><a href="/issues/{{this.issue.issueNumber}}/{{this.slug}}">{{this.title}}</a> <span> <br>
+				{{this.byLine}} </span></h3>
+				
+			<div class="article-brief">
+				{{{this.content.brief.html}}}
+			</div>
+		
+		</div>
+
+		{{/each}}
 </div>
 {{/if}}

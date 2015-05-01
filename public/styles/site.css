@@ -761,6 +761,10 @@ header.global {
   .article-parent .article-section p strong:first-child {
     text-transform: uppercase;
     font-family: "Mercury SSm A', 'Mercury SSm B", sans-serif; }
+  .article-parent .article-section p em:first-child {
+    text-transform: uppercase;
+    font-family: "Mercury SSm A', 'Mercury SSm B", sans-serif;
+    font-style: normal; }
 .article-parent .article-section .breakout-img {
   margin-top: 2rem;
   margin-bottom: 2rem; }

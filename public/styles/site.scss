@@ -345,6 +345,16 @@ header.global {
                 text-transform: uppercase;
                 font-family: $fontFamily;
             }
+            &:first-child {
+                em:first-child {
+                    text-transform: uppercase;
+                    font-family: $fontFamily;
+                    font-style: normal;
+                }
+            }
+        }
+        h3 {
+            font-family: $font-family;
         }
         .breakout-img {
             margin-top: 2rem;
@@ -353,19 +363,14 @@ header.global {
                 max-width: 100%;
             }
         }
-        .breakout-quote, .breakout-quotes {
-            max-width: 100%;
-            text-align: center;
-            
-        }
         blockquote {
+            width: 100%;
+            padding: 0;
+            p {
                 width: 100%;
-                padding: 0;
-                p em{
-                    width: 100%;
-                    max-width: 100%;
-                }
+                max-width: 100%;
             }
+        }
         @media only screen and (max-width: $midSizeWidth) {}
         @media only screen and (max-width: $tabletWidth) {}
     }
