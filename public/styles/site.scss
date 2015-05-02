@@ -313,9 +313,10 @@ header.global {
             }
         }
         h5 {
-            font-family: $fontFamily;
+            @include whitneyFont();
             font-size: 1em;
             font-weight: bold;
+            text-transform: uppercase;
         }
     }
     //create a mixin to adjust layout

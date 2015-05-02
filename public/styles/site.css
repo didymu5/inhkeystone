@@ -737,9 +737,12 @@ header.global {
         font-size: 150%;
         margin-bottom: .5em; } }
   .article-parent header h5 {
-    font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;
+    font-family: 'Whitney Cond A', 'Whitney Cond B';
+    font-weight: 600;
+    font-style: normal;
     font-size: 1em;
-    font-weight: bold; }
+    font-weight: bold;
+    text-transform: uppercase; }
 .article-parent .article-section p {
   margin-right: auto !important;
   margin-left: auto !important;
