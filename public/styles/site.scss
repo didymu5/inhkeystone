@@ -313,9 +313,8 @@ header.global {
             }
         }
         h5 {
-            @include whitneyFont();
+	    @include whitneyFont(bold, normal, condense);
             font-size: 1.2em;
-            font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 0.1em;
         }
@@ -354,8 +353,7 @@ header.global {
             }
             .intro-begin {
                 text-transform: uppercase;
-                font-family: $fontFamily;
-                font-style: normal;
+		@include whitneyFont(normal, normal, screensmart);
             }
         }
         h3 {

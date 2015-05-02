@@ -738,10 +738,9 @@ header.global {
         margin-bottom: .5em; } }
   .article-parent header h5 {
     font-family: 'Whitney Cond A', 'Whitney Cond B';
-    font-weight: 600;
+    font-weight: bold;
     font-style: normal;
     font-size: 1.2em;
-    font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.1em; }
 .article-parent .article-section p {
@@ -770,7 +769,8 @@ header.global {
     font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif; }
   .article-parent .article-section p .intro-begin {
     text-transform: uppercase;
-    font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;
+    font-family: 'Whitney SSm A', 'Whitney SSm B';
+    font-weight: normal;
     font-style: normal; }
 .article-parent .article-section h3 {
   font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;

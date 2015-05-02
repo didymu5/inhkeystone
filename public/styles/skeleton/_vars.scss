@@ -10,8 +10,13 @@ $backgroundColor: #fff; 														// default background information
 @mixin mercuryFont($weight, $style){
 	font-family: 'Mercury SSm A', 'Mercury SSm B'; font-weight: $weight; font-style: $style;
 }
-@mixin whitneyFont() {
-	font-family: 'Whitney Cond A', 'Whitney Cond B'; font-weight: 600; font-style: normal;
+@mixin whitneyFont($weight, $style, $fontType) {
+	@if $fontType == condense {
+		font-family: 'Whitney Cond A', 'Whitney Cond B'; font-weight: $weight; font-style: $style;
+	}
+	@if $fontType == screensmart {
+		font-family: 'Whitney SSm A', 'Whitney SSm B'; font-weight: $weight; font-style: $style;
+	}
 }
 
 // font vars
