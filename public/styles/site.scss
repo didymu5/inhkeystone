@@ -222,7 +222,7 @@ header.global {
     height: auto;
     margin-bottom: 30px;
     padding-bottom: 20px;
-    max-height: 370px;
+    min-height: 370px;
     overflow: hidden;
     h3 {
         font-size: 120%;
@@ -339,6 +339,7 @@ header.global {
             img {
                 max-width: 100%;
             }
+            line-height: 1.7em;
             @media only screen and (max-width: $midSizeWidth) {
                 @include readingColumn(30rem);
                 padding-right: 10px;
@@ -349,7 +350,7 @@ header.global {
             }
             .intro-begin {
                 @include whitneyFont(normal, normal, screensmart);
-		color: #006B98;
+                color: #006B98;
             }
         }
         h3 {
@@ -368,6 +369,7 @@ header.global {
         blockquote {
             border-left: none;
             text-align: center;
+            @include whitneyFont();
             @include readingColumn(80%);
             p {
                 width: 100%;
