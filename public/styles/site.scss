@@ -406,7 +406,7 @@ header.global {
         p, .desc{
             float:right;
             display: inline-block;
-            width:80%;
+            max-width: 100%;
         }
         p>strong:first-child{
             text-transform: uppercase;  

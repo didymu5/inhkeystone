@@ -24,6 +24,9 @@ Post.add({
 		extended: { type: Types.Markdown, toolbarOptions: {  }, height: 400 }
 	},
 	InfoArticle: { type: Types.Markdown, toolbarOptions: {  }, height: 150 },
+	InfoArticle2: { type: Types.Html, wysiwyg: true, height: 200 },
+	InfoArticle3: { type: Types.Html, wysiwyg: true, height: 200 },
+	InfoArticle4: { type: Types.Html, wysiwyg: true, height: 200 },
 	kindOf: {type: Types.Select, options:'authored, interview, series', default: 'authored'},
 	categories: { type: Types.Relationship, ref: 'PostCategory', many: true },
 	issue:{type: Types.Relationship, ref:'Issue', many: false},

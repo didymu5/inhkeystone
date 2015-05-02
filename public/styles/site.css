@@ -817,7 +817,7 @@ header.global {
     .article-parent .article-info .info-card p, .article-parent .article-info .info-card .desc {
       float: right;
       display: inline-block;
-      width: 80%; }
+      max-width: 100%; }
     .article-parent .article-info .info-card p > strong:first-child {
       text-transform: uppercase; }
 

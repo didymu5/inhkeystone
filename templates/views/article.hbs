@@ -47,11 +47,38 @@
 	</div> --}}
 	<div class="article-info">
 		
-		<div class="info-card">
+		{{#if data.post.InfoArticle.html}}
+			<div class="info-card">
 
 			{{{data.post.InfoArticle.html}}}
 
-		</div>
+			</div>
+		{{/if}}
+		{{#if data.post.InfoArticle2.html}}
+			<div class="info-card">
+
+			{{{data.post.InfoArticle2.html}}}
+
+			</div>
+		{{/if}}
+		
+		{{#if data.post.InfoArticle3.html}}
+			<div class="info-card">
+
+			{{{data.post.InfoArticle3.html}}}
+
+			</div>
+		{{/if}}
+		
+		{{#if data.post.InfoArticle4.html}}
+			<div class="info-card">
+
+			{{{data.post.InfoArticle4.html}}}
+
+			</div>
+		{{/if}}
+		
+		
 		
 
 	</div>
