@@ -383,7 +383,7 @@ header.global {
     .article-info {
     @extend .container;
     @extend .full-width;
-
+    
     margin-top: 3%;
     border-top: 1px #ccc solid;
 
@@ -396,21 +396,21 @@ header.global {
         display: inline;
     }
     .info-card{
-	@include readingColumn(40rem);
-	@include whitneyFont(normal, normal, condense);
-	margin-top: 1.2rem;
-	img{
-	    float:left;
-	    width:82px;
-	}
-	p, .desc{
-	    float:right;
-	    display: inline-block;
-	    width:80%;
-	}
-	p>strong:first-child{
-	    text-transform: uppercase;
-	}
+        @include readingColumn(40rem);
+        @include whitneyFont(normal, normal, screensmart);
+        margin-top: 1.2rem;
+        img{
+            float:left;
+            width:82px;
+        }
+        p, .desc{
+            float:right;
+            display: inline-block;
+            width:80%;
+        }
+        p>strong:first-child{
+            text-transform: uppercase;  
+        }
     }
 }
 
