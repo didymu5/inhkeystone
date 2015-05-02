@@ -653,6 +653,9 @@ header.global {
     #issue-banner .issue-banner-title #sillywrp {
       padding: 1.5rem 6rem; }
   #issue-banner h2 {
+    font-family: 'Mercury SSm A', 'Mercury SSm B';
+    font-weight: 600;
+    font-style: italic;
     font-size: 4rem;
     line-height: 1em;
     display: block; }
