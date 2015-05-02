@@ -183,12 +183,12 @@ header.global {
             margin-bottom: 10px;
         }
         #sillywrp {
-            padding: 1.5rem 6rem;
+            padding: 1.5rem 5rem;
         }
     }
     h2 {
         @include mercuryFont(600, italic);
-        font-size: 4rem;
+        font-size: 3rem;
         line-height: 1em;
         display: block;
     }
