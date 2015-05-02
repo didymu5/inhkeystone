@@ -374,6 +374,7 @@ header.global {
             p {
                 width: 100%;
                 max-width: 100%;
+                font-style: italic;
             }
         }
         @media only screen and (max-width: $midSizeWidth) {}
@@ -407,6 +408,9 @@ header.global {
             float:right;
             display: inline-block;
             max-width: 100%;
+            img{
+                margin-right:3px;
+            }
         }
         p>strong:first-child{
             text-transform: uppercase;  

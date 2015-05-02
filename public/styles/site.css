@@ -793,7 +793,8 @@ header.global {
   max-width: 80%; }
   .article-parent .article-section blockquote p {
     width: 100%;
-    max-width: 100%; }
+    max-width: 100%;
+    font-style: italic; }
 .article-parent .article-info {
   margin-top: 3%;
   border-top: 1px #ccc solid; }
@@ -818,6 +819,8 @@ header.global {
       float: right;
       display: inline-block;
       max-width: 100%; }
+      .article-parent .article-info .info-card p img, .article-parent .article-info .info-card .desc img {
+        margin-right: 3px; }
     .article-parent .article-info .info-card p > strong:first-child {
       text-transform: uppercase; }
 
