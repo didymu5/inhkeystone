@@ -369,7 +369,7 @@ header.global {
         blockquote {
             border-left: none;
             text-align: center;
-            @include whitneyFont();
+            @include whitneyFont(bold, italics, condense);
             @include readingColumn(80%);
             p {
                 width: 100%;
