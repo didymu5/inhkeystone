@@ -676,6 +676,7 @@ header.global {
 .article-card, .lead-cover-text {
   height: auto;
   margin-bottom: 30px;
+  margin-left: 2.2% !important;
   padding-bottom: 20px;
   min-height: 370px;
   overflow: hidden; }
