@@ -327,9 +327,10 @@ header.global {
     @mixin readingColumn($setWidth){
 
         @extend .u-cf;
-            margin-right: auto !important;
-            margin-left: auto !important;
+            margin-right: auto;
+            margin-left: auto ;
             max-width: $setWidth;
+            min-width: $setWidth;
     }
     .article-section {
         @extend .columns;
