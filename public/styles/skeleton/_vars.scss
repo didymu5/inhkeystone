@@ -5,14 +5,21 @@
 
 // background vars
 $backgroundColor: #fff; 														// default background information
-// @import url("//fonts.googleapis.com/css?family=News+Cycle:400,700");
-@import url("//cloud.typography.com/6556354/788968/css/fonts.css");
+
+
+@mixin mercuryFont($weight, $style){
+	font-family: 'Mercury SSm A', 'Mercury SSm B'; font-weight: $weight; font-style: $style;
+}
+@mixin whitneyFont() {
+	font-family: 'Whitney Cond A', 'Whitney Cond B'; font-weight: 600; font-style: normal;
+}
+
 // font vars
 $fontSize: 16px; 																// default font size. Change here will adjust sizes across the board.
-$fontFamily: "Mercury SSm A', 'Mercury SSm B", sans-serif;	// default fonts
+$fontFamily: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;	// default fonts
 $fontColor: #444; 																// default font color
 $inhBlue : #00a0e4;
-$readingFamily: "Mercury SSm A', 'Mercury SSm B", serif;	
+$readingFamily: Georgia, Times, 'Times New Roman', serif;;	
 // form vars
 $formFont: $fontFamily; 														// default font font
 

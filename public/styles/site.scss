@@ -295,7 +295,8 @@ header.global {
         margin-bottom: 2em;
         h1 {
             font-size: 3em;
-            font-style: italic;
+            
+            @include mercuryFont(700, italic);
             line-height: 1em;
             @media only screen and (max-width: $tabletWidth) {
                 font-size: 200%;
@@ -332,7 +333,7 @@ header.global {
         p {
             @include readingColumn(40rem);
 
-            font-family: $readingFamily;
+            @include mercuryFont(400, normal);
             
             img {
                 max-width: 100%;

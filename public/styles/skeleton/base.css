@@ -1,4 +1,3 @@
-@import url("//cloud.typography.com/6556354/788968/css/fonts.css");
 /**
  * SASS/SCSS/Compass Transcription of Skeleton Responsive Grid
  * originally authored by Dave Gamache. This translation offers
@@ -75,7 +74,7 @@ table {
 body {
   background: #fff;
   font-size: 16px;
-  font-family: "Mercury SSm A', 'Mercury SSm B", sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: 24px;
@@ -264,7 +263,7 @@ input[type="text"], input[type="password"], input[type="email"], input[type="sea
   -o-border-radius: 2px;
   border-radius: 2px;
   font-size: 17px;
-  font-family: "Mercury SSm A', 'Mercury SSm B", sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;
   color: #777;
   margin: 0 0 20px;
   width: 210px;
