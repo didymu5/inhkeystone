@@ -379,26 +379,14 @@ header.global {
         @media only screen and (max-width: $midSizeWidth) {}
         @media only screen and (max-width: $tabletWidth) {}
     }
-}
 
-.article-info {
-    @extend .columns;
-    @extend .five;
-    float: right !important;
-    border-top: 3px #000 solid;
+    .article-info {
+    @extend .container;
+    @extend .full-width;
+
     margin-top: 3%;
-    @media only screen and (max-width: $midSizeWidth) {
-        position: relative !important;
-        float: left;
-        width: 100% !important;
-        border-top: 1px #ccc solid;
-    }
-    @media only screen and (max-width: $tabletWidth) {
-        position: relative !important;
-        float: left;
-        border: 1px #000 solid;
-        width: 100%;
-    }
+    border-top: 1px #ccc solid;
+
     h3 {
         font-size: 120%;
     }
@@ -407,7 +395,27 @@ header.global {
         margin: 8px;
         display: inline;
     }
+    .info-card{
+	@include readingColumn(40rem);
+	@include whitneyFont(normal, normal, condense);
+	margin-top: 1.2rem;
+	img{
+	    float:left;
+	    width:82px;
+	}
+	p, .desc{
+	    float:right;
+	    display: inline-block;
+	    width:80%;
+	}
+	p>strong:first-child{
+	    text-transform: uppercase;
+	}
+    }
 }
+
+}
+
 
 .badge-img {
     @include border-radius(50%);

@@ -20,7 +20,8 @@
 	<div class="article-section post">
 		{{{data.post.content.extended.html}}}
 	</div>
-	<div class="article-info">
+
+	{{!-- <div class="article-info">
 		<div class="author-info">
 			{{#each data.post.author}}
 			{{#if @index}}
@@ -40,10 +41,19 @@
 			{{{this.bio.html}}}
 			{{/each}}
 		</div>
-		<hr>
 		<div class="more-info">
 			{{{data.post.InfoArticle.html}}}
 		</div>
+	</div> --}}
+	<div class="article-info">
+
+		<div class="info-card">
+
+			{{{data.post.InfoArticle.html}}}
+
+		</div>
+
+
 	</div>
 </article>
 </div>
