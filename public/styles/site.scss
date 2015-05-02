@@ -313,7 +313,7 @@ header.global {
             }
         }
         h5 {
-	    @include whitneyFont(bold, normal, condense);
+            @include whitneyFont(bold, normal, condense);
             font-size: 1.2em;
             text-transform: uppercase;
             letter-spacing: 0.1em;
@@ -347,13 +347,9 @@ header.global {
             @media only screen and (max-width: $mobileLandscapeWidth) {
                 @include readingColumn(90%);
             }
-            strong:first-child {
-                text-transform: uppercase;
-                font-family: $fontFamily;
-            }
             .intro-begin {
-                text-transform: uppercase;
-		@include whitneyFont(normal, normal, screensmart);
+                @include whitneyFont(normal, normal, screensmart);
+                color:#00a0e4;
             }
         }
         h3 {

@@ -764,14 +764,11 @@ header.global {
       margin-right: auto !important;
       margin-left: auto !important;
       max-width: 90%; } }
-  .article-parent .article-section p strong:first-child {
-    text-transform: uppercase;
-    font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif; }
   .article-parent .article-section p .intro-begin {
-    text-transform: uppercase;
     font-family: 'Whitney SSm A', 'Whitney SSm B';
     font-weight: normal;
-    font-style: normal; }
+    font-style: normal;
+    color: #00a0e4; }
 .article-parent .article-section h3 {
   font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;
   text-align: center;
