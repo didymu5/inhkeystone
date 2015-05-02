@@ -314,9 +314,10 @@ header.global {
         }
         h5 {
             @include whitneyFont();
-            font-size: 1em;
+            font-size: 1.2em;
             font-weight: bold;
             text-transform: uppercase;
+            letter-spacing: 0.1em;
         }
     }
     //create a mixin to adjust layout

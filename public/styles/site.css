@@ -740,9 +740,10 @@ header.global {
     font-family: 'Whitney Cond A', 'Whitney Cond B';
     font-weight: 600;
     font-style: normal;
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: bold;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    letter-spacing: 0.1em; }
 .article-parent .article-section p {
   margin-right: auto !important;
   margin-left: auto !important;
