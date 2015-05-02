@@ -643,6 +643,9 @@ header.global {
     height: auto;
     background: #fff; }
     #issue-banner .issue-banner-title .issue-number-date {
+      font-family: 'Whitney Cond A', 'Whitney Cond B';
+      font-weight: 600;
+      font-style: normal;
       clear: both;
       width: 100%;
       display: block;

@@ -176,6 +176,7 @@ header.global {
         height: auto;
         background: #fff;
         .issue-number-date {
+            @include whitneyFont(600, normal, condense);
             clear: both;
             width: 100%;
             display: block;
@@ -186,6 +187,7 @@ header.global {
         }
     }
     h2 {
+        @include mercuryFont(600, italic, condense);
         font-size: 4rem;
         line-height: 1em;
         display: block;
