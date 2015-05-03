@@ -375,9 +375,10 @@ header.global {
         blockquote {
             border-left: none;
             text-align: center;
-            @include whitneyFont(bold, italic, condense);
+	    @include whitneyFont(normal, italic, screensmart);
             @include readingColumn(80%);
             p {
+		@include whitneyFont(normal, italic, screensmart);
                 width: 100%;
                 max-width: 100%;
                 font-style: italic;
@@ -390,6 +391,7 @@ header.global {
         @extend .container;
         @extend .full-width;
         margin-top: 5%;
+	padding-top: 2%;
         border-top: 1px #ccc solid;
         h3 {
             font-size: 120%;
@@ -403,9 +405,9 @@ header.global {
             @include readingColumn(40rem);
             @include whitneyFont(normal, normal, screensmart);
             margin-top: 1.5rem;
-
+	    font-size: .9em;
             @media only screen and (max-width: $midSizeWidth) {
-            @include readingColumn(30rem);
+		@include readingColumn(30rem);
                 padding-right: 10px;
                 padding-left: 10px;
             }

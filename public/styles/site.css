@@ -804,19 +804,23 @@ header.global {
 .article-parent .article-section blockquote {
   border-left: none;
   text-align: center;
-  font-family: 'Whitney Cond A', 'Whitney Cond B';
-  font-weight: bold;
+  font-family: 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: normal;
   font-style: italic;
   margin-right: auto;
   margin-left: auto;
   max-width: 80%;
   min-width: 80%; }
   .article-parent .article-section blockquote p {
+    font-family: 'Whitney SSm A', 'Whitney SSm B';
+    font-weight: normal;
+    font-style: italic;
     width: 100%;
     max-width: 100%;
     font-style: italic; }
 .article-parent .article-info {
   margin-top: 5%;
+  padding-top: 2%;
   border-top: 1px #ccc solid; }
   .article-parent .article-info h3 {
     font-size: 120%; }
@@ -832,7 +836,8 @@ header.global {
     font-family: 'Whitney SSm A', 'Whitney SSm B';
     font-weight: normal;
     font-style: normal;
-    margin-top: 1.5rem; }
+    margin-top: 1.5rem;
+    font-size: .9em; }
     @media only screen and (max-width: 1020px) {
       .article-parent .article-info .info-card {
         margin-right: auto;
