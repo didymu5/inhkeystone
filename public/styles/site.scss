@@ -252,6 +252,7 @@ header.global {
     }
     .article-brief{
         @include whitneyFont(normal, normal, screensmart);
+        font-size:.9em;
     }
     .article-img {
         width: 100%;
