@@ -273,7 +273,11 @@
             text-transform: uppercase;
         }
         .breakout-img {
-            @extend .article-parent header h5;
+            @include whitneyFont(bold, normal, condense);
+            font-size: 1.2em;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            
             margin-top: 2rem;
             margin-bottom: 2rem;
             text-align: center;

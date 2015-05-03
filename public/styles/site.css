@@ -846,6 +846,9 @@ header.global {
   font-family: 'Whitney Cond A', 'Whitney Cond B';
   font-weight: bold;
   font-style: normal;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   margin-top: 2rem;
   margin-bottom: 2rem;
   text-align: center; }
