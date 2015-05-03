@@ -816,7 +816,7 @@ header.global {
     max-width: 100%;
     font-style: italic; }
 .article-parent .article-info {
-  margin-top: 3%;
+  margin-top: 5%;
   border-top: 1px #ccc solid; }
   .article-parent .article-info h3 {
     font-size: 120%; }
@@ -832,7 +832,21 @@ header.global {
     font-family: 'Whitney SSm A', 'Whitney SSm B';
     font-weight: normal;
     font-style: normal;
-    margin-top: 1.2rem; }
+    margin-top: 1.5rem; }
+    @media only screen and (max-width: 1020px) {
+      .article-parent .article-info .info-card {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 30rem;
+        min-width: 30rem;
+        padding-right: 10px;
+        padding-left: 10px; } }
+    @media only screen and (max-width: 420px) {
+      .article-parent .article-info .info-card {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 90%;
+        min-width: 90%; } }
     .article-parent .article-info .info-card img {
       float: left;
       width: 82px; }

@@ -389,7 +389,7 @@ header.global {
     .article-info {
         @extend .container;
         @extend .full-width;
-        margin-top: 3%;
+        margin-top: 5%;
         border-top: 1px #ccc solid;
         h3 {
             font-size: 120%;
@@ -402,7 +402,16 @@ header.global {
         .info-card {
             @include readingColumn(40rem);
             @include whitneyFont(normal, normal, screensmart);
-            margin-top: 1.2rem;
+            margin-top: 1.5rem;
+
+            @media only screen and (max-width: $midSizeWidth) {
+            @include readingColumn(30rem);
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+            @media only screen and (max-width: $mobileLandscapeWidth) {
+                @include readingColumn(90%);
+            }
             img {
                 float: left;
                 width: 82px;
