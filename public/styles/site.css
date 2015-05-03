@@ -519,12 +519,15 @@ header.global {
   margin-bottom: 1rem;
   /* Re-overiding the width 100% declaration to match size of % based container */ }
   header.global #inh-tagline {
-    color: #000;
+    font-family: 'Whitney SSm A', 'Whitney SSm B';
+    font-weight: bold;
+    font-style: normal;
+    font-size: .75em;
     text-transform: uppercase;
     letter-spacing: 2px;
+    color: #000;
     border-top: 1px solid #000;
-    margin-top: 25px;
-    font-size: .75em; }
+    margin-top: 25px; }
     header.global #inh-tagline p {
       text-align: center;
       background: #fff;

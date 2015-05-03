@@ -10,12 +10,13 @@ header.global {
     margin-top: 10px;
     margin-bottom: 1rem;
     #inh-tagline {
-        color: #000;
+        @include whitneyFont(bold, normal, screensmart);
+        font-size: .75em;
         text-transform: uppercase;
         letter-spacing: 2px;
+        color: #000;
         border-top: 1px solid #000;
         margin-top: 25px;
-        font-size: .75em;
         p {
             text-align: center;
             background: #fff;
