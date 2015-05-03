@@ -506,7 +506,9 @@ header.global {
 #footer {
     border-top: 1px #ccc solid;
     padding-top: 2em;
+    @include whitneyFont(normal, normal, screensmart);
     .footerlinks {
+        @include whitneyFont(600, normal, condense);
         float: left;
         li {
             float: left;
