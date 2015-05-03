@@ -343,6 +343,11 @@ header.global {
             text-transform: uppercase;
             letter-spacing: 0.1em;
         }
+        h6{
+            @include whitneyFont(bold, normal, screensmart);
+            font-size: 1.2em;
+            letter-spacing: 0.1em;   
+        }
     }
     //create a mixin to adjust layout
     @mixin readingColumn($setWidth) {

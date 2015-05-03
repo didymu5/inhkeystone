@@ -22,6 +22,9 @@
 		{{!-- {{#if author.name.first}}by {{author.name.first}}{{/if}} --}}
 		{{data.post.byLine}}
 		</h5>
+		<h6>{{#if data.post.InfoArticle4}}
+		{{data.post.InfoArticle4}}
+		{{/if}}</h6>
 	</header>
 	<div class="article-section post">
 		{{{data.post.content.extended.html}}}

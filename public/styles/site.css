@@ -771,6 +771,12 @@ header.global {
     font-size: 1.2em;
     text-transform: uppercase;
     letter-spacing: 0.1em; }
+  .article-parent header h6 {
+    font-family: 'Whitney SSm A', 'Whitney SSm B';
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1.2em;
+    letter-spacing: 0.1em; }
 .article-parent .article-section p {
   margin-right: auto;
   margin-left: auto;
