@@ -552,7 +552,8 @@ header.global {
           max-width: 20rem; } }
       @media only screen and (max-width: 420px) {
         header.global .inh-logo-main img.inh-logo {
-          max-width: 15rem; } }
+          max-width: 15rem;
+          margin-top: 1px; } }
   header.global .navbar + .docs-section {
     border-top-width: 0; }
   header.global .navbar, header.global .navbar-spacer {
@@ -776,7 +777,8 @@ header.global {
     font-weight: bold;
     font-style: normal;
     font-size: 1.2em;
-    letter-spacing: 0.1em; }
+    letter-spacing: 0.1em;
+    margin-top: 2em; }
 .article-parent .article-section p {
   margin-right: auto;
   margin-left: auto;
