@@ -250,6 +250,9 @@ header.global {
             font-style: italic;
         }
     }
+    .article-brief{
+        @include whitneyFont(normal, normal, screensmart);
+    }
     .article-img {
         width: 100%;
     }

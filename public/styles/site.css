@@ -701,6 +701,10 @@ header.global {
       font-size: 80%;
       font-weight: normal;
       font-style: italic; }
+  .article-card .article-brief, .lead-cover-text .article-brief {
+    font-family: 'Whitney SSm A', 'Whitney SSm B';
+    font-weight: normal;
+    font-style: normal; }
   .article-card .article-img, .lead-cover-text .article-img {
     width: 100%; }
   .article-card .article-categories, .lead-cover-text .article-categories {
