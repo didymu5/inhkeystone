@@ -547,6 +547,12 @@ header.global {
       max-width: 26rem;
       margin-bottom: 1rem;
       margin-top: .5rem; }
+      @media only screen and (max-width: 1020px) {
+        header.global .inh-logo-main img.inh-logo {
+          max-width: 20rem; } }
+      @media only screen and (max-width: 420px) {
+        header.global .inh-logo-main img.inh-logo {
+          max-width: 15rem; } }
   header.global .navbar + .docs-section {
     border-top-width: 0; }
   header.global .navbar, header.global .navbar-spacer {

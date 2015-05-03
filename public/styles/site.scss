@@ -40,6 +40,12 @@ header.global {
             max-width: 26rem;
             margin-bottom: 1rem;
             margin-top: .5rem;
+            @media only screen and (max-width: $midSizeWidth) {
+                max-width: 20rem;
+            }
+            @media only screen and (max-width: $mobileLandscapeWidth) {
+                max-width:15rem;
+            }
         }
     }
     .navbar + .docs-section {
