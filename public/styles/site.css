@@ -611,6 +611,29 @@ header.global {
   header.global .has-docked-nav .navbar > .container, header.global .has-docked-nav .navbar > .full-width, header.global .has-docked-nav .navbar > #issue-banner, header.global .has-docked-nav .article-parent .navbar > .article-info, .article-parent header.global .has-docked-nav .navbar > .article-info, header.global .has-docked-nav .navbar > .issue-single, header.global .has-docked-nav .navbar > .issues-list {
     width: 80%; }
 
+#footer {
+  border-top: 1px #ccc solid;
+  padding-top: 2em;
+  font-family: 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: normal;
+  font-style: normal; }
+  #footer p {
+    text-align: right; }
+  #footer .footerlinks {
+    font-family: 'Whitney Cond A', 'Whitney Cond B';
+    font-weight: 600;
+    font-style: normal;
+    float: left; }
+    #footer .footerlinks li {
+      float: left;
+      color: #000;
+      padding-right: 2em; }
+      #footer .footerlinks li a {
+        color: #000;
+        font-size: 1.3em;
+        text-decoration: none;
+        text-transform: uppercase; }
+
 .full-width, #issue-banner, .article-parent .article-info, .issue-single {
   width: 100%; }
 
@@ -932,26 +955,3 @@ header.global {
     font-size: 2em;
     font-style: italic;
     line-height: 1em; }
-
-#footer {
-  border-top: 1px #ccc solid;
-  padding-top: 2em;
-  font-family: 'Whitney SSm A', 'Whitney SSm B';
-  font-weight: normal;
-  font-style: normal; }
-  #footer p {
-    text-align: right; }
-  #footer .footerlinks {
-    font-family: 'Whitney Cond A', 'Whitney Cond B';
-    font-weight: 600;
-    font-style: normal;
-    float: left; }
-    #footer .footerlinks li {
-      float: left;
-      color: #000;
-      padding-right: 2em; }
-      #footer .footerlinks li a {
-        color: #000;
-        font-size: 1.3em;
-        text-decoration: none;
-        text-transform: uppercase; }
