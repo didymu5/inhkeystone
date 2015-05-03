@@ -6,6 +6,12 @@
 
 	</div>
 </div>
+
+{{!-- http://res.cloudinary.com/inhmag/image/upload/v1430629415/facets-logo_qqdzb6.png --}}
+<div class="facets-header">
+	<img src="http://res.cloudinary.com/inhmag/image/upload/v1430629415/facets-logo_qqdzb6.png" alt="Facets" class="facetLogo">
+</div>
+
 <div class="wrapper-article">
 <article class="article-parent">
 	<header>
@@ -20,31 +26,7 @@
 	<div class="article-section post">
 		{{{data.post.content.extended.html}}}
 	</div>
-	
-	{{!-- <div class="article-info">
-		<div class="author-info">
-			{{#each data.post.author}}
-			{{#if @index}}
-				{{else}}
-				<img src="{{this.image.secure_url}}" class="badge-img">
-			{{/if}}
-			<h3>
-			by
-			
-			{{#if @index}}
-			{{this.name.first}} {{this.name.last}} and
-			{{else}}
-			{{this.name.first}} {{this.name.last}}
-			{{/if}}
-			
-			</h3>
-			{{{this.bio.html}}}
-			{{/each}}
-		</div>
-		<div class="more-info">
-			{{{data.post.InfoArticle.html}}}
-		</div>
-	</div> --}}
+
 	<div class="article-info">
 		
 		{{#if data.post.InfoArticle.html}}

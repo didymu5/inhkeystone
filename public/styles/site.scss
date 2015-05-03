@@ -294,7 +294,23 @@ header.global {
 
 .isArticle {
     @include small-issue-banner;
+    .facets-header{
+        display: none;
+        text-align: center;
+    }
 }
+.facets{
+    .facets-header{
+        display: block;
+        text-align: center;
+        margin-bottom: 4%;
+        img.facetLogo{
+            max-width: 200px;
+        }
+    }
+}
+
+
 
 .article-parent {
     header {
@@ -336,6 +352,7 @@ header.global {
         max-width: $setWidth;
         min-width: $setWidth;
     }
+    
     .article-section {
         @extend .columns;
         @extend .ten;
@@ -375,13 +392,13 @@ header.global {
         blockquote {
             border-left: none;
             text-align: center;
-	    @include whitneyFont(normal, italic, screensmart);
+            @include whitneyFont(normal, italic, screensmart);
             @include readingColumn(80%);
             p {
-		@include whitneyFont(normal, italic, screensmart);
+                @include whitneyFont(normal, italic, screensmart);
                 width: 100%;
                 max-width: 100%;
-                font-style: italic;
+                color:#006B98;
             }
         }
         @media only screen and (max-width: $midSizeWidth) {}
@@ -391,7 +408,7 @@ header.global {
         @extend .container;
         @extend .full-width;
         margin-top: 5%;
-	padding-top: 2%;
+        padding-top: 2%;
         border-top: 1px #ccc solid;
         h3 {
             font-size: 120%;
@@ -405,9 +422,9 @@ header.global {
             @include readingColumn(40rem);
             @include whitneyFont(normal, normal, screensmart);
             margin-top: 1.5rem;
-	    font-size: .9em;
+            font-size: .9em;
             @media only screen and (max-width: $midSizeWidth) {
-		@include readingColumn(30rem);
+                @include readingColumn(30rem);
                 padding-right: 10px;
                 padding-left: 10px;
             }
