@@ -66,8 +66,6 @@
 						</ul>
 			
 				</nav>
-			
-			
 		</header>				
 		<!--
 			Flash messages allow you to display once-off status messages to users, e.g. form
@@ -110,7 +108,10 @@
 		{{{isAdminEditorJS user}}}
 
 		<script type="text/javascript">
-		$('.article-section.post p>em>strong:first').addClass('intro-begin');
+		$(function(){
+			$('.article-section.post p>em>strong:first').addClass('intro-begin');	
+		});
+
 		</script>
 	</body>
 </html>

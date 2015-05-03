@@ -832,7 +832,9 @@ header.global {
       display: inline-block;
       max-width: 100%; }
       .article-parent .article-info .info-card p img, .article-parent .article-info .info-card .desc img {
-        margin-right: 3px; }
+        margin-right: 30px;
+        border-radius: 100%;
+        border: 1px #eee solid; }
     .article-parent .article-info .info-card p > strong:first-child {
       text-transform: uppercase; }
 
