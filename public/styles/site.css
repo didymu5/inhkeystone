@@ -931,6 +931,8 @@ header.global {
   font-family: 'Whitney SSm A', 'Whitney SSm B';
   font-weight: normal;
   font-style: normal; }
+  #footer p {
+    text-align: right; }
   #footer .footerlinks {
     font-family: 'Whitney Cond A', 'Whitney Cond B';
     font-weight: 600;
@@ -943,4 +945,5 @@ header.global {
       #footer .footerlinks li a {
         color: #000;
         font-size: 1.3em;
-        text-decoration: none; }
+        text-decoration: none;
+        text-transform: uppercase; }

@@ -507,6 +507,9 @@ header.global {
     border-top: 1px #ccc solid;
     padding-top: 2em;
     @include whitneyFont(normal, normal, screensmart);
+    p{
+        text-align: right;
+    }
     .footerlinks {
         @include whitneyFont(600, normal, condense);
         float: left;
@@ -518,6 +521,7 @@ header.global {
                 color: #000;
                 font-size: 1.3em;
                 text-decoration: none;
+                text-transform: uppercase;
             }
         }
     }
