@@ -10,7 +10,7 @@ header.global {
     margin-top: 10px;
     margin-bottom: 1rem;
     #inh-tagline {
-        @include whitneyFont(bold, normal, screensmart);
+        @include whitneyFont(normal, normal, screensmart);
         font-size: .75em;
         text-transform: uppercase;
         letter-spacing: 2px;
@@ -44,7 +44,7 @@ header.global {
                 max-width: 20rem;
             }
             @media only screen and (max-width: $mobileLandscapeWidth) {
-                max-width:15rem;
+                max-width: 15rem;
             }
         }
     }
@@ -305,7 +305,6 @@ header.global {
         margin-bottom: 2em;
         h1 {
             font-size: 3em;
-            
             @include mercuryFont(700, italic);
             line-height: 1em;
             @media only screen and (max-width: $tabletWidth) {
@@ -330,23 +329,19 @@ header.global {
         }
     }
     //create a mixin to adjust layout
-
-    @mixin readingColumn($setWidth){
-
+    @mixin readingColumn($setWidth) {
         @extend .u-cf;
-            margin-right: auto;
-            margin-left: auto ;
-            max-width: $setWidth;
-            min-width: $setWidth;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: $setWidth;
+        min-width: $setWidth;
     }
     .article-section {
         @extend .columns;
         @extend .ten;
         p {
             @include readingColumn(40rem);
-
             @include mercuryFont(400, normal);
-            
             img {
                 max-width: 100%;
             }
@@ -391,48 +386,43 @@ header.global {
         @media only screen and (max-width: $midSizeWidth) {}
         @media only screen and (max-width: $tabletWidth) {}
     }
-
     .article-info {
-    @extend .container;
-    @extend .full-width;
-    
-    margin-top: 3%;
-    border-top: 1px #ccc solid;
-
-    h3 {
-        font-size: 120%;
-    }
-    .badge-img {
-        float: right;
-        margin: 8px;
-        display: inline;
-    }
-    .info-card{
-        @include readingColumn(40rem);
-        @include whitneyFont(normal, normal, screensmart);
-        margin-top: 1.2rem;
-        img{
-            float:left;
-            width:82px;
+        @extend .container;
+        @extend .full-width;
+        margin-top: 3%;
+        border-top: 1px #ccc solid;
+        h3 {
+            font-size: 120%;
         }
-        p, .desc{
-            float:right;
-            display: inline-block;
-            max-width: 100%;
-            img{
-                margin-right: 30px;
-                border-radius: 100%;
-                border: 1px #eee solid;
+        .badge-img {
+            float: right;
+            margin: 8px;
+            display: inline;
+        }
+        .info-card {
+            @include readingColumn(40rem);
+            @include whitneyFont(normal, normal, screensmart);
+            margin-top: 1.2rem;
+            img {
+                float: left;
+                width: 82px;
+            }
+            p, .desc {
+                float: right;
+                display: inline-block;
+                max-width: 100%;
+                img {
+                    margin-right: 30px;
+                    border-radius: 100%;
+                    border: 1px #eee solid;
+                }
+            }
+            p>strong:first-child {
+                text-transform: uppercase;
             }
         }
-        p>strong:first-child{
-            text-transform: uppercase;  
-        }
     }
 }
-
-}
-
 
 .badge-img {
     @include border-radius(50%);

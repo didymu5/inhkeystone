@@ -520,7 +520,7 @@ header.global {
   /* Re-overiding the width 100% declaration to match size of % based container */ }
   header.global #inh-tagline {
     font-family: 'Whitney SSm A', 'Whitney SSm B';
-    font-weight: bold;
+    font-weight: normal;
     font-style: normal;
     font-size: .75em;
     text-transform: uppercase;
