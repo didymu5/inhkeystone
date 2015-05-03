@@ -273,10 +273,13 @@
             text-transform: uppercase;
         }
         .breakout-img {
+            @extend .article-parent header h5;
             margin-top: 2rem;
             margin-bottom: 2rem;
+            text-align: center;
             img {
                 max-width: 100%;
+                margin-bottom: 1em;
             }
         }
         blockquote {

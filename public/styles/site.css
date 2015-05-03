@@ -843,10 +843,15 @@ header.global {
   font-size: 1.2em;
   text-transform: uppercase; }
 .article-parent .article-section .breakout-img {
+  font-family: 'Whitney Cond A', 'Whitney Cond B';
+  font-weight: bold;
+  font-style: normal;
   margin-top: 2rem;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  text-align: center; }
   .article-parent .article-section .breakout-img img {
-    max-width: 100%; }
+    max-width: 100%;
+    margin-bottom: 1em; }
 .article-parent .article-section blockquote {
   border-left: none;
   text-align: center;
