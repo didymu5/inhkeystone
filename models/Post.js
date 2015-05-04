@@ -17,7 +17,7 @@ Post.add({
 	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
 	author: { type: Types.Relationship, ref: 'Author', index: true, many:true },
 	byLine: {type: Types.Text},
-	publishedDate: { type: Types.Date, index: true, dependsOn: { state: 'published' } },
+	publishedDate: { type: Types.Date, index: true },
 	image: { type: Types.Url, select: true},
 	content: {
 		brief: { type: Types.Markdown, toolbarOptions: {  }, height: 150 },
