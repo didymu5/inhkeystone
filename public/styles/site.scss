@@ -183,6 +183,9 @@
         text-align: center;
     }
 }
+.about-page{
+    @include whitneyFont(normal, normal, screensmart);
+}
 .facets{
     .facets-header{
         display: block;

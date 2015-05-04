@@ -762,6 +762,11 @@ header.global {
   display: none;
   text-align: center; }
 
+.about-page {
+  font-family: 'Whitney SSm A', 'Whitney SSm B';
+  font-weight: normal;
+  font-style: normal; }
+
 .facets .facets-header {
   display: block;
   text-align: center;
