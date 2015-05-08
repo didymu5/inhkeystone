@@ -41,7 +41,7 @@ exports = module.exports = function(req, res) {
 				if (err || !results.length) {
 					return next(err);
 				}
-				locals.data.issues = results.reverse();
+				locals.data.issues = results;
 				next();
 			});
 
