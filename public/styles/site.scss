@@ -269,6 +269,9 @@
                 color: #006B98;
             }
         }
+	ol{
+	    @include readingColumn(40rem);
+	}
         h3 {
             font-family: $fontFamily;
             text-align: center;

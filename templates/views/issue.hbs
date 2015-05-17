@@ -14,21 +14,20 @@
 					#<a href="/issues/{{issueNumber}}">{{issueNumber}}: <strong>{{name}}</strong> </a>
 				</p>
 			</div>{{/each}}
-		</div>{{/if}} 
+		</div>{{/if}}
 		{{#if data.issue}} {{!-- single issue--}}
-		<div class="issue-single">
+		<div class="issue-single-1">
 			<div id="issue-banner" class="full-width {{data.issue.theme}}" style="background-image: url({{data.issue.coverImage}});">
 				<div class="issue-banner-title">
 					<div id="sillywrp">
-						<h2>
-							<a href="/issues/{{data.issue.issueNumber}}">&lt; {{data.issue.name}}</a>
-						</h2>
+						<span class="issue-number-date">Issue #{{data.issue.issueNumber}} | {{date data.issue.publishedDate format='MMM YYYY'}}</span>
+						<h2>{{data.issue.name}}</h2>
 					</div>
 				</div>
 			</div>{{!-- {{#each data.posts}}
 			<div class="post-box">
 				<h2>
-					<a href="/issues/{{issue.issueNumber}}/{{slug}}">{{title}}</a>
+				<a href="/issues/{{issue.issueNumber}}/{{slug}}">{{title}}</a>
 				</h2>{{byLine}}
 			</div>{{/each}} --}}
 			<div class="container">
@@ -40,15 +39,15 @@
 							{{getCatName this.categories htmlwrap="span"}}
 						</div>{{/if}}
 						<h3>
-							<a href="/issues/{{this.issue.issueNumber}}/{{this.slug}}">{{this.title}}</a> <span><br>
-							{{this.byLine}}</span>
-						</h3>
-						<div class="article-brief">
-							{{{this.content.brief.html}}}
-						</div>
-					</div>{{/each}}
-				</div>
+						<a href="/issues/{{this.issue.issueNumber}}/{{this.slug}}">{{this.title}}</a> <span><br>
+					{{this.byLine}}</span>
+					</h3>
+					<div class="article-brief">
+						{{{this.content.brief.html}}}
+					</div>
+				</div>{{/each}}
 			</div>
-		</div>{{/if}}
-	</body>
+		</div>
+	</div>{{/if}}
+</body>
 </html>

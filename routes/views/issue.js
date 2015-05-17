@@ -37,7 +37,7 @@ exports = module.exports = function(req, res) {
 
 		} else {
 			//list All issues
-			keystone.list('Issue').model.find().where('state','published').sort('issueNumber').exec(function(err, results) {
+			keystone.list('Issue').model.find().where('state','archived').sort('issueNumber').exec(function(err, results) {
 				if (err || !results.length) {
 					return next(err);
 				}
