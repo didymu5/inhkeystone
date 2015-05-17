@@ -850,6 +850,7 @@ header.global {
   font-family: 'Mercury SSm A', 'Mercury SSm B';
   font-weight: 400;
   font-style: normal;
+  padding-left: 42px;
   line-height: 1.7em; }
   .article-parent .article-section ol img, .article-parent .article-section ul img {
     max-width: 100%; }
@@ -858,16 +859,13 @@ header.global {
       margin-right: auto;
       margin-left: auto;
       max-width: 30rem;
-      min-width: 30rem;
-      padding-right: 10px;
-      padding-left: 42px; } }
+      min-width: 30rem; } }
   @media only screen and (max-width: 420px) {
     .article-parent .article-section ol, .article-parent .article-section ul {
       margin-right: auto;
       margin-left: auto;
       max-width: 90%;
-      min-width: 90%;
-      padding-left: 42px; } }
+      min-width: 90%; } }
   .article-parent .article-section ol .intro-begin, .article-parent .article-section ul .intro-begin {
     font-family: 'Whitney SSm A', 'Whitney SSm B';
     font-weight: normal;
