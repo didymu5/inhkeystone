@@ -860,13 +860,14 @@ header.global {
       max-width: 30rem;
       min-width: 30rem;
       padding-right: 10px;
-      padding-left: 10px; } }
+      padding-left: 42px; } }
   @media only screen and (max-width: 420px) {
     .article-parent .article-section ol, .article-parent .article-section ul {
       margin-right: auto;
       margin-left: auto;
       max-width: 90%;
-      min-width: 90%; } }
+      min-width: 90%;
+      padding-left: 42px; } }
   .article-parent .article-section ol .intro-begin, .article-parent .article-section ul .intro-begin {
     font-family: 'Whitney SSm A', 'Whitney SSm B';
     font-weight: normal;
