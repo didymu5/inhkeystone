@@ -325,7 +325,7 @@ label span, legend span {
   float: left; }
 
 /* Clear a float */
-.u-cf, header.global .inh-logo-main, header.global .navbar .navbar-list, header.global .navbar-spacer .navbar-list, #issue-banner, #issue-banner .issue-banner-title, .article-parent .article-section p, .article-parent .article-section blockquote, .article-parent .article-info .info-card, .issue-single .post-box {
+.u-cf, header.global .inh-logo-main, header.global .navbar .navbar-list, header.global .navbar-spacer .navbar-list, #issue-banner, #issue-banner .issue-banner-title, .article-parent .article-section p, .article-parent .article-section ol, .article-parent .article-section ul, .article-parent .article-section blockquote, .article-parent .article-info .info-card, .issue-single .post-box {
   content: "";
   display: table;
   clear: both; }
@@ -838,6 +838,36 @@ header.global {
       max-width: 90%;
       min-width: 90%; } }
   .article-parent .article-section p .intro-begin {
+    font-family: 'Whitney SSm A', 'Whitney SSm B';
+    font-weight: normal;
+    font-style: normal;
+    color: #006B98; }
+.article-parent .article-section ol, .article-parent .article-section ul {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 40rem;
+  min-width: 40rem;
+  font-family: 'Mercury SSm A', 'Mercury SSm B';
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.7em; }
+  .article-parent .article-section ol img, .article-parent .article-section ul img {
+    max-width: 100%; }
+  @media only screen and (max-width: 1020px) {
+    .article-parent .article-section ol, .article-parent .article-section ul {
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 30rem;
+      min-width: 30rem;
+      padding-right: 10px;
+      padding-left: 10px; } }
+  @media only screen and (max-width: 420px) {
+    .article-parent .article-section ol, .article-parent .article-section ul {
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 90%;
+      min-width: 90%; } }
+  .article-parent .article-section ol .intro-begin, .article-parent .article-section ul .intro-begin {
     font-family: 'Whitney SSm A', 'Whitney SSm B';
     font-weight: normal;
     font-style: normal;
