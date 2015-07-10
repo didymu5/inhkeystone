@@ -4,6 +4,8 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="INHERITANCE magazine is a nonprofit ministry of INHERITANCE media, which serves to connect Asian American Christians to one another and to the global community.">
+		
 		<title>INHERITANCE {{data.post.title}}</title>
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 		<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
@@ -11,10 +13,10 @@
 
 		<link rel="stylesheet" type="text/css" href="//cloud.typography.com/6556354/788968/css/fonts.css" />
 		<link href="/styles/site.css" rel="stylesheet">
-		
+
 		<meta property="og:title" content="{{data.post.title}}">
 		<meta property="og:site_name" content="Inheritance Magazine">
-		<meta property="og:url" content="/issues/29/{{data.post.slug}}">
+		<meta property="og:url" content="http://inheritancemag.com/issues/{{data.post.issue.issueNumber}}/{{data.post.slug}}">
 		<meta property="og:description" content="{{{data.content.brief.html}}}">
 		<meta property="og:type" content="article">
 		<meta property="og:image" content="{{data.post.image}}">
@@ -52,7 +54,7 @@
 		<![endif]-->
 		
 	</head>
-	<body class="{{data.post.articleClass}}">
+	<body class="{{data.post.articleClass}}">{{data.post.image}}
 		<header id="header" class="global">
 			<div id="inh-tagline"><p>The Intersection of <em>Faith</em> and <em>Culture</em></p></div>
 			
